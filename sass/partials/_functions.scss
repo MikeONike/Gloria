@@ -1,0 +1,5 @@
+@mixin text-format($fs, $lh, $ls: normal) {
+   font-size:$fs;
+   line-height:$lh;
+   letter-spacing:$ls;
+}

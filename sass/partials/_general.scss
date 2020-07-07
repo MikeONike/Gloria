@@ -1,0 +1,105 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'FreightDispProSemibold-Regular'; 
+    min-height: 100vh;
+}
+
+body,
+html {
+    overflow: hidden;   
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+.container {
+    max-width: 100%;
+    margin:0 auto;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    z-index: 20;
+    background:transparent;
+    display: none;
+}
+
+///////////////////////////////
+// show images by aspect ratio
+///////////////////////////////
+
+.news-item-image {
+    position: relative;
+    background: rgba(#eee, 0.5);
+    overflow: hidden;
+    display: block;
+
+    //ovo je namesteno da bude default 16:9
+    &:before {
+        content: '';
+        display: block;
+        padding-top: 56.25%;
+
+    }
+
+    &.size-4-3:before {
+        padding-top: 75%;
+
+    }
+
+    &.size-3-4:before {
+        padding-top: 133.33%;
+
+    }
+
+    &.size-3-2:before {
+        padding-top: 67.68%;
+
+    }
+
+    &.size-1-1:before {
+        padding-top: 100%;
+
+    }
+
+    img {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 100%;
+        max-width: none;
+        display: block;
+        transition: 0.6s linear;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+       max-width:900px;
+    }
+ 
+ }
+
+ @media (min-width:1180px) {
+    .container {
+        max-width:1180px;
+        padding:0 1rem;
+     }
+}
