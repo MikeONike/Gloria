@@ -4,14 +4,15 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: 'FreightDispProSemibold-Regular'; 
+    font-family: 'FreightDispProSemibold-Regular';
     min-height: 100vh;
+    height: 2000px;
 }
 
-body,
-html {
-    overflow: hidden;   
-}
+// body,
+// html {
+//     overflow: hidden;   
+// }
 
 img {
     width: 100%;
@@ -25,17 +26,18 @@ a {
 
 .container {
     max-width: 100%;
-    margin:0 auto;
+    margin: 0 auto;
+    // padding: 0 1rem;
 }
 
 .overlay {
-    position: absolute;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     z-index: 20;
-    background:transparent;
+    background: transparent;
     display: none;
 }
 
@@ -92,14 +94,14 @@ a {
 
 @media (min-width:992px) {
     .container {
-       max-width:900px;
+        max-width: 962px;
     }
- 
- }
 
- @media (min-width:1180px) {
+}
+
+@media (min-width:1180px) {
     .container {
-        max-width:1180px;
-        padding:0 1rem;
-     }
+        max-width: 1180px;
+        padding: 0 1rem;
+    }
 }

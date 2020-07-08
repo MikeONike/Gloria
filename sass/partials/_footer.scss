@@ -1,0 +1,184 @@
+.footer {
+   .top-btn {
+
+      a {
+         width:100%;
+         height:40px;
+         background:$link-hover;
+         position: relative;
+         &::before {
+            display:block;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            font-size:2rem;
+            color:$blank;
+         }
+      }
+   }
+   .top-footer {
+      padding:0 1rem;
+      background-color:$top-footer-bg;
+      .top-footer-left {
+         .top-footer-left-head {
+            margin-bottom:2.8rem;
+            border-bottom: $link-border 1px solid;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:2.7rem 1.5rem;
+            a.footer-logo {
+               width:101px;
+               height:44px;
+               position: relative;
+               &::after {
+                  content:'';
+                  position: absolute;
+                  display: block;
+                  top:50%;
+                  left:0;
+                  width:100%;
+                  height:100%;
+                  transform:translate(0, -50%);
+                  background:url('../img/svg/logo/gloria-logo.svg');
+                  z-index: 1;
+               }
+            }
+
+            .social-nav {
+               ul {
+                  display:flex;
+                  li {
+                     margin-right:2rem;
+                     &:last-of-type {                        
+                        margin-right:0;
+                     }
+                  }
+                  a {
+                     font-size:2rem;
+                     color:$sublink-color;
+                  }
+               }
+            }
+         }
+         .top-footer-left-nav {
+            &>ul {
+               display:flex;
+               flex-flow:column nowrap;
+               & a {
+                  transition:0.3s ease;
+                  
+                  &:hover {
+                     color:$link-hover;
+                  }
+               }
+               &>li>a {
+                  font-family: 'Lato', sans-serif;
+                  font-weight:700;
+                  color:$void;
+                  @include text-format(1.8rem, 2.6rem, 0.1rem);
+                  text-transform: uppercase;
+
+               }
+               &>li {
+                  margin-bottom:2rem;
+                  padding:0 2rem;
+               }
+
+               &>li>ul {
+                  display:flex;
+                  flex-flow:row wrap;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+                  li {
+                     margin-right:1rem;
+                     a {
+                        font-family: 'Lato', sans-serif;
+                        @include text-format(1.6rem, 2.6rem);
+                        color:$sublink-color;
+                        text-transform: capitalize;
+                        &:hover {
+                           text-decoration: underline;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      .top-footer-newsletter {
+         .newsletter-text {
+            border-bottom: $link-border 1px solid;
+            padding:2rem;
+            margin-bottom:2rem;
+            h3 {
+               font-family: 'Lato', sans-serif;
+               font-weight:900;
+               @include text-format(2.4rem, 2rem);
+               text-transform: uppercase;
+               margin-bottom:5px;
+            } 
+            p {
+               font-family: 'Lato', sans-serif;
+               line-height: 2rem;
+            }
+
+         }
+
+         .newsletter-form{ 
+            .newsletter-form-input {
+               display:flex;
+               align-items: center;
+               input {
+                  border:none;
+                  flex:1;
+                  padding:7px 1.5rem;  
+                  font-family: 'FreightTextProBook-Regular';
+                  transition: 0.3s ease;
+                  &:focus {
+                     outline:none;
+                     background-color:transparent;
+                     border-bottom-color: $void;
+                  }
+               }
+               input, a {
+                  @include text-format(1.6rem, 3rem);
+                  display: block;
+                  border-bottom: 2px solid $link-hover;
+               }
+               a {
+                  font-size: 2rem;
+                  padding:7px 2.5rem;
+                  color:$blank;
+                  background-color: $link-hover;
+
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width:870px) {
+   .footer {
+      .top-btn {
+         display:flex;
+         justify-content: flex-end;
+         a {
+            width:60px;
+            height:60px;
+            margin-right:2rem;
+         }
+      }
+      .top-footer {
+         .container {
+
+            display:flex;
+            justify-content: space-between;
+            align-items: flex-start;
+         }
+      }
+   }
+}
