@@ -23,9 +23,11 @@ $(window).on('load', function () {
    function checkSearchClass() {
       if (headerSearchInput.hasClass('search-visible')) {
          headerSearchInput.removeClass('search-visible');
+         console.log(0)
       } else {
          headerSearchInput.addClass('search-visible');
-         overlay.css('display', 'block');
+         console.log(1)
+         // overlay.css('display', 'block');
       }
    }
 
@@ -33,11 +35,12 @@ $(window).on('load', function () {
       e.preventDefault();
       checkSearchClass();
    });
-
-   overlay.on('click', function () {
-      checkSearchClass();
-
-      overlay.css('display', 'none');
+   
+   $(document).on('click', function (e) {
+      if($(e.target).is('.header-search form > a.fas.fa-search')) {
+         return;
+      }
+      headerSearchInput.removeClass('search-visible');
    })
 
    //////////////////////////////////////
@@ -77,29 +80,37 @@ $(window).on('load', function () {
    // change header navigation link order
    /////////////////////////////////////////
 
-   function changeNavOrder() {
-      // $('.head-nav li a > span:contains(magazin)').closest('li').css('order', '1');
-      // $('.head-nav li a > span:contains(živim)').closest('li').css('order', '2');
-      $('ul li a:contains(magazin)').closest('li').css('order', '1');
-      $('ul li a:contains(živim)').closest('li').css('order', '2');
+   function changeNavOrderHeader() {
+      $('.head-nav li a > span:contains(magazin)').closest('li').css('order', '1');
+      $('.head-nav li a > span:contains(živim)').closest('li').css('order', '2');
+   }
+   
+   function changeNavOrderFooter() {
+      $('.footer ul li a:contains(magazin)').closest('li').css('order', '1');
+      $('.footer ul li a:contains(živim)').closest('li').css('order', '2');
    }
 
-   function revertNavOrder() {
-      // $('.head-nav li a > span:contains(magazin)').closest('li').css('order', '0');
-      // $('.head-nav li a > span:contains(živim)').closest('li').css('order', '0');
-      $('ul li a:contains(magazin)').closest('li').css('order', '0');
-      $('ul li a:contains(živim)').closest('li').css('order', '0');
+   function revertNavOrderHeader() {
+      $('.head-nav li a > span:contains(magazin)').closest('li').css('order', '0');
+      $('.head-nav li a > span:contains(živim)').closest('li').css('order', '0');
    }
+   
+   function revertNavOrderFooter() {
+      $('.footer ul li a:contains(magazin)').closest('li').css('order', '0');
+      $('.footer ul li a:contains(živim)').closest('li').css('order', '0');
+   }
+
+   changeNavOrderFooter();
 
    if ($(window).width() <= 900) {
-      changeNavOrder();
+      changeNavOrderHeader();
    }
 
    $(window).on('resize', function () {
       if ($(window).width() <= 900) {
-         changeNavOrder();
+         changeNavOrderHeader();
       } else {
-         revertNavOrder();
+         revertNavOrderHeader();
       }
    })
 
@@ -188,5 +199,13 @@ $(window).on('load', function () {
 
    $('.newsletter-text').css('height', `${$('.top-footer-left-head').outerHeight()}px`); 
 
+
+   /////////////////////////////////////////////
+   // button back to top
+   /////////////////////////////////////////////
+
+   $('.footer .top-btn').on('click', function() {
+      $('body, html').animate({scrollTop: 0}, 1000);
+   });
 
 });

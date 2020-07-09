@@ -5,8 +5,6 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'FreightDispProSemibold-Regular';
-    min-height: 100vh;
-    height: 2000px;
 }
 
 // body,
@@ -39,6 +37,10 @@ a {
     z-index: 20;
     background: transparent;
     display: none;
+}
+
+main {
+    height:2000px;
 }
 
 ///////////////////////////////
