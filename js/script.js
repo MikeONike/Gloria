@@ -11,6 +11,10 @@ $(window).on('load', function () {
 
    var topFooterLeftHead = $('.top-footer-left-head')[0];
 
+   var postFormatDiagonal;
+   var articleContentWidth;
+   var articleContentOffset;
+
    // var subMenuItems = $('.head-nav > ul > li > ul');
    // var menuItems = $('.head-nav > ul > li');
    // var menuItemsArray = menuItems.toArray();
@@ -35,11 +39,13 @@ $(window).on('load', function () {
       e.preventDefault();
       checkSearchClass();
    });
-   
+
    $(document).on('click', function (e) {
-      if($(e.target).is('.header-search form > a.fas.fa-search')) {
+
+      if ($(e.target).is('input') || $(e.target).is('a.fas.fa-search')) {
          return;
       }
+
       headerSearchInput.removeClass('search-visible');
    })
 
@@ -84,7 +90,7 @@ $(window).on('load', function () {
       $('.head-nav li a > span:contains(magazin)').closest('li').css('order', '1');
       $('.head-nav li a > span:contains(živim)').closest('li').css('order', '2');
    }
-   
+
    function changeNavOrderFooter() {
       $('.footer ul li a:contains(magazin)').closest('li').css('order', '1');
       $('.footer ul li a:contains(živim)').closest('li').css('order', '2');
@@ -94,7 +100,7 @@ $(window).on('load', function () {
       $('.head-nav li a > span:contains(magazin)').closest('li').css('order', '0');
       $('.head-nav li a > span:contains(živim)').closest('li').css('order', '0');
    }
-   
+
    function revertNavOrderFooter() {
       $('.footer ul li a:contains(magazin)').closest('li').css('order', '0');
       $('.footer ul li a:contains(živim)').closest('li').css('order', '0');
@@ -182,30 +188,84 @@ $(window).on('load', function () {
    function mainMarginTop() {
       if ($(window).outerWidth() <= 992) {
          $('main').css('margin-top', `${$('.header').height()}px`);
-      }else {
-         if($(window).scrollTop() >= 60) {
+      } else {
+         if ($(window).scrollTop() >= 60) {
             $('main').css('margin-top', `${$('.header-bottom').height()}px`);
          }
          $('main').css('margin-top', `0px`);
       }
    }
-   
+
    mainMarginTop();
    $(window).on('resize scroll', function () {
       mainMarginTop();
    })
 
-   /////////////////////////////////////////////
+   ///////////////////////////////////////////////////////////
+   // newsletter text and top footer left head equal height
+   ///////////////////////////////////////////////////////////
 
-   $('.newsletter-text').css('height', `${$('.top-footer-left-head').outerHeight()}px`); 
-
+   $(window).on('resize', function () {
+      if ($('.newsletter-text').outerHeight() >= $('.top-footer-left-head').outerHeight()) {
+         $('.top-footer-left-head').css('min-height', `${$('.newsletter-text').outerHeight()}px`);
+      } else {
+         $('.newsletter-text').css('min-height', `${$('.top-footer-left-head').outerHeight()}px`);
+      }
+   })
 
    /////////////////////////////////////////////
    // button back to top
    /////////////////////////////////////////////
 
-   $('.footer .top-btn').on('click', function() {
-      $('body, html').animate({scrollTop: 0}, 1000);
+   $('.footer .top-btn').on('click', function () {
+      $('body, html').animate({
+         scrollTop: 0
+      }, 1000);
    });
 
+   ////////////////////////////////////////
+   // position post format in center
+   ////////////////////////////////////////
+   postFormatDiagonal = Math.sqrt(Math.pow($('.post-format').width(), 2) + Math.pow($('.post-format').width(), 2));
+
+   function positionPostFormatIcon($offset, $width, $postformat, $postFormatLead) {
+
+      articleContentWidth = $width.outerWidth();
+
+      articleContentOffset = $offset.offset().left;
+
+      $postformat.offset({
+         left: articleContentOffset + articleContentWidth / 2 - postFormatDiagonal / 2
+      });
+      if($(window).outerWidth() >= 768) {
+         $('.home-main-lead .post-format').css({
+            'bottom': `20px`,
+            'top': ''
+         });
+      } else {
+         $('.home-main-lead .post-format').css('bottom', ``);
+      }
+      $postformat.css('top', `-22px`);
+   }
+
+   for (var i = 0; i < $('.home-article').length; i++) {
+      positionPostFormatIcon(
+         $($('.home-article')[i]),
+         $($('.home-article')[i]),
+         $($('.post-format')[i]),
+         $($('.home-main-lead .post-format')[i])
+      );
+   }
+   $(window).on('resize', function () {
+      for (var i = 0; i < $('.home-article').length; i++) {
+         positionPostFormatIcon(
+            $($('.home-article')[i]),
+            $($('.home-article')[i]),
+            $($('.post-format')[i]),
+            $($('.home-main-lead .post-format')[i])
+         );
+         console.log($($('.home-article')[i]).offset().left);
+      }
+
+   })
 });

@@ -128,6 +128,10 @@
             border-bottom: $link-border 1px solid;
             padding: 2rem;
             margin-bottom: 2rem;
+            display:flex;
+            flex-flow:column nowrap;
+            align-items: flex-start;
+            justify-content: center;
 
             h3 {
                font-family: 'Lato', sans-serif;
@@ -230,8 +234,8 @@
       }
 
       .copyright {
-         text-align:center;
-         color:$footer-copyright;
+         text-align: center;
+         color: $footer-copyright;
          font-family: 'ArialMT';
          @include text-format(1.4rem, 2.4rem);
          margin-bottom: 2rem;
@@ -239,21 +243,23 @@
 
       .other-links {
          ul {
-            display:flex;
+            display: flex;
             align-items: center;
             justify-content: center;
             flex-flow: column nowrap;
+
             li {
-               margin-bottom:1rem;
+               margin-bottom: 1rem;
+
                a {
                   font-family: 'Lato', sans-serif;
                   line-height: 1.6rem;
-                  color:$sublink-color;
+                  color: $sublink-color;
                   transition: 0.3s ease;
-                  
+
                   &:hover {
                      text-decoration: underline;
-                     color:$link-hover;
+                     color: $link-hover;
 
                   }
                }
@@ -270,11 +276,13 @@
       .bottom-footer {
          .other-links {
             ul {
-               flex-flow:row wrap;
+               flex-flow: row wrap;
+
                li {
-                  margin-right:2rem;
+                  margin-right: 2rem;
+
                   &:last-of-type {
-                     margin-right:0;
+                     margin-right: 0;
 
                   }
                }
@@ -307,7 +315,7 @@
 
          .top-footer-left {
             flex: 1;
-            margin-right: 2 rem;
+            margin-right: 2rem;
          }
       }
    }
@@ -323,7 +331,6 @@
                &>ul {
                   display: grid;
                   grid-template-columns: repeat(6, 100px);
-                  gap: 0 1rem;
 
                   &>li {
                      padding: 0;
@@ -347,6 +354,21 @@
                         }
                      }
                   }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width:1180px) {
+   .footer {
+      .top-footer {
+         .top-footer-left {
+            .top-footer-left-nav {
+               &>ul {
+                  grid-template-columns: repeat(6, 130px);
+                  gap: 0 1rem;
                }
             }
          }

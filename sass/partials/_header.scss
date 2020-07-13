@@ -1,21 +1,21 @@
-
 // header fixed on scroll classs
 .header-fixed {
    position: fixed !important;
-   left:50%;
-   transform:translateX(-50%);
+   left: 50%;
+   transform: translateX(-50%);
 
    .top-header {
-      display:none !important;
+      display: none !important;
    }
 
    .bottom-header {
+     
 
-      .head-nav {
+      s .head-nav {
          &>ul {
             &>li {
                a {
-                  padding:1.1rem 5px !important;
+                  padding: 1.1rem 5px !important;
                }
             }
          }
@@ -23,32 +23,33 @@
 
       .head-home {
          a {
-            
+
             .head-home-text {
-               opacity:0 !important;
+               opacity: 0 !important;
                visibility: hidden !important;
             }
 
             &::after {
                visibility: visible !important;
-               opacity:1 !important;
-               display:block !important;
+               opacity: 1 !important;
+               display: block !important;
             }
 
             &::before {
-               display:block !important;
+               display: block !important;
             }
          }
       }
+
       .social-nav {
-         padding:0 !important; 
+         padding: 0 !important;
       }
 
       .header-search {
          form {
 
             &>a.fa-search {
-               margin:0 !important;
+               margin: 0 !important;
             }
          }
       }
@@ -57,12 +58,13 @@
 
 .header {
    // display: none;
-   background-color:$blank;
+   background-color: $blank;
    position: fixed;
    top: 0;
    left: 0;
    width: 100%;
    z-index: 19;
+   margin-bottom:3.1rem;
 
    // top header
    .top-header {
@@ -97,8 +99,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: $link-border 1px solid;
       padding: 7px 1.4rem;
+      border-bottom: $link-border 1px solid;
 
       //hamburger menu
 
@@ -169,8 +171,8 @@
 
             &::after {
                content: '';
-               visibility:visible;
-               opacity:1;
+               visibility: visible;
+               opacity: 1;
                transition: 0.3s ease;
                position: absolute;
                display: block;
@@ -204,14 +206,14 @@
       }
 
       .head-nav {
-         background-color:$blank;
+         background-color: $blank;
          position: absolute;
          top: 100%;
          left: 0px;
          width: 100%;
          height: calc(100vh - 72px);
          display: none;
-         overflow-y:scroll;
+         overflow-y: scroll;
 
 
          &>ul {
@@ -331,9 +333,10 @@
             input {
                font-family: 'FreightTextProBook-Regular';
                width: 190px;
+
                &:focus {
-                  outline:none;
-                  background-color:transparent;
+                  outline: none;
+                  background-color: transparent;
                   border-bottom-color: $void;
                }
             }
@@ -359,20 +362,20 @@
 @media (min-width:992px) {
    .header-fixed {
       position: fixed !important;
-      left:50%;
-      transform:translateX(-50%);
+      left: 50%;
+      transform: translateX(-50%);
 
       .top-header {
-         display:none !important;
+         display: none !important;
       }
 
       .bottom-header {
-
+         
          .head-nav {
             &>ul {
                &>li {
                   a {
-                     padding:1.1rem 5px !important;
+                     padding: 1.1rem 5px !important;
                   }
                }
             }
@@ -380,42 +383,44 @@
 
          .head-home {
             a {
-               
+
                .head-home-text {
-                  opacity:0 !important;
+                  opacity: 0 !important;
                   visibility: hidden !important;
                }
-   
+
                &::after {
                   visibility: visible !important;
-                  opacity:1 !important;
-                  display:block !important;
+                  opacity: 1 !important;
+                  display: block !important;
                }
-   
+
                &::before {
-                  display:block !important;
+                  display: block !important;
                }
             }
          }
+
          .social-nav {
-            padding:0 !important; 
+            padding: 0 !important;
          }
 
          .header-search {
             form {
 
                &>a.fa-search {
-                  margin:0 !important;
+                  margin: 0 !important;
                }
             }
          }
       }
    }
-  
+
 
    .header {
       position: relative;
       border-bottom: $void 3px solid;
+
       .top-header {
          display: flex;
       }
@@ -424,6 +429,7 @@
          // position: relative;
          padding: 0;
          align-items: flex-end;
+         border:none;
 
          .ham-menu {
             display: none;
@@ -440,9 +446,9 @@
                }
 
                &::after {
-                  visibility:hidden;
-                  opacity:0;
-                  width:6.7rem;
+                  visibility: hidden;
+                  opacity: 0;
+                  width: 6.7rem;
                }
 
                &::before {
@@ -456,7 +462,7 @@
             position: relative;
             display: block;
             height: auto;
-            overflow-y:auto;
+            overflow-y: auto;
 
             &>ul {
                display: flex;
@@ -489,7 +495,7 @@
                      }
 
                      &:hover {
-                        color:$link-hover;
+                        color: $link-hover;
                      }
                   }
                }

@@ -28,20 +28,17 @@ a {
     // padding: 0 1rem;
 }
 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 20;
-    background: transparent;
-    display: none;
-}
+// .overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     z-index: 20;
+//     background: transparent;
+//     display: none;
+// }
 
-main {
-    height:2000px;
-}
 
 ///////////////////////////////
 // show images by aspect ratio
@@ -104,6 +101,13 @@ main {
 @media (min-width:1180px) {
     .container {
         max-width: 1180px;
+        padding: 0 1rem;
+    }
+}
+
+@media (min-width:1440px) {
+    .container {
+        max-width: 1440px;
         padding: 0 1rem;
     }
 }
