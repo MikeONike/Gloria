@@ -19,6 +19,32 @@
       }
    }
 
+   .article-img-no-after {
+      &::after {
+         display: none !important;
+      }
+   }
+
+   .video-muted {
+      text-align: center;
+
+      &::after {
+         content: '\f6a9';
+         font-family: "Font Awesome 5 Free";
+         font-weight: 900;
+         font-size: 3rem;
+         line-height: 3rem;
+         display: block;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 4rem;
+         height: 4rem;
+         color: $blank;
+      }
+   }
+
    a {
       color: $main-text;
       transition: 0.3s ease;
@@ -75,16 +101,49 @@
    }
 }
 
+// .separate {
+//    .border {
+//       width:90% !important;
+//       max-width:620px !important;
+//    }
+// }
+.personally {
+   .personally-title {
+      a {
+         transition: 0.3s ease;
+         color: $link-hover;
+
+         &:hover {
+            color: $main-text;
+         }
+      }
+   }
+}
+
+.healthy {
+   .healthy-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $healthy-title;
+      img {
+         width: 4rem;
+         margin-right:2rem;
+      }
+   }
+}
+
+
 .home-main {
    margin-top: 30px;
 
    .home-main-title {
-      text-align:center;
+      text-align: center;
       font-family: 'Lato', sans-serif;
       font-weight: 900;
       @include text-format(1.8rem, 3rem, 7.2px);
       text-transform: uppercase;
-      margin-bottom:2.3rem;
+      margin-bottom: 2.3rem;
    }
 
    .home-main-lead {
@@ -128,6 +187,7 @@
    .home-main-articles {
       margin: 0 10%;
 
+
       .home-main-articles-section {
          display: flex;
          justify-content: space-around;
@@ -138,18 +198,24 @@
             width: 23%;
          }
       }
+
+      .home-grid-news {
+         justify-content: flex-start;
+      }
+
+
       .border {
          max-width: 522px;
       }
    }
 
    .three-articles {
-      .home-main-articles-section {
-         .home-article {
-            flex: 0 0 31%;
-            width: 31%;
-         }
+
+      .home-article {
+         flex: 0 0 31% !important;
+         width: 31% !important;
       }
+
    }
 
    .home-main {
@@ -235,6 +301,11 @@
             &:last-of-type {
                width: 100%;
                max-width: none;
+            }
+
+            &:first-of-type {
+               width: 100%;
+               max-width: 600px;
             }
          }
       }

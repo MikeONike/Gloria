@@ -15,6 +15,10 @@ $(window).on('load', function () {
    var articleContentWidth;
    var articleContentOffset;
 
+   var video = $('video');
+
+   var flexItemBasis;
+
    // var subMenuItems = $('.head-nav > ul > li > ul');
    // var menuItems = $('.head-nav > ul > li');
    // var menuItemsArray = menuItems.toArray();
@@ -217,7 +221,7 @@ $(window).on('load', function () {
    // button back to top
    /////////////////////////////////////////////
 
-   $('.footer .top-btn').on('click', function () {
+   $('.footer .top-btn a').on('click', function () {
       $('body, html').animate({
          scrollTop: 0
       }, 1000);
@@ -237,7 +241,7 @@ $(window).on('load', function () {
       $postformat.offset({
          left: articleContentOffset + articleContentWidth / 2 - postFormatDiagonal / 2
       });
-      if($(window).outerWidth() >= 768) {
+      if ($(window).outerWidth() >= 768) {
          $('.home-main-lead .post-format').css({
             'bottom': `20px`,
             'top': ''
@@ -268,4 +272,72 @@ $(window).on('load', function () {
       }
 
    })
+
+   /////////////////////////////////////////////////////////////
+   // if article contains video remove black overlay on hover
+   /////////////////////////////////////////////////////////////
+
+   for (var i = 0; i < $('.article-img').length; i++) {
+
+      if ($($('.article-img')[i]).children()[0] == $($('.article-img')[i]).children('video')[0]) {
+         $($('.article-img')[i]).addClass('article-img-no-after');
+      }
+   }
+
+   /////////////////////////////////////////////
+   // add mute icon on video if video is muted 
+   /////////////////////////////////////////////
+
+   for (var i = 0; i < video.length; i++) {
+      if ($('video')[i].muted == true) {
+         console.log('true')
+         $($('video')[i]).parent('a').addClass('video-muted');
+         $($('video')[i]).parent('a').removeClass('article-img-no-after');
+      }
+   }
+
+   $('video').on('play pause ended timeupdate volumechange', (e) => {
+      if ($(e.target)[0].muted == true) {
+         $(e.target).parent('a').addClass('video-muted');
+         $(e.target).parent('a').removeClass('article-img-no-after');
+      } else {
+         $(e.target).parent('a').removeClass('video-muted');
+         $(e.target).parent('a').addClass('article-img-no-after');
+      }
+   });
+
+   ////////////////////////////////////////////////////////
+   // CALCULATE MARGINS
+   ////////////////////////////////////////////////////////
+
+   function flexMargins() {
+      if (!($('.flex-item').css('flex-basis'))) {
+         return;
+      }
+      flexItemBasis = $('.flex-item').css('flex-basis').replace('%', '');
+      flexItemBasis = Number(flexItemBasis);
+
+      //I - calculate how many items are there by dividing 100% by Flex Basis to get number of items in the flex container (100 / 49 == 2)
+      //II - than multiplay that by flax basis to know how much space those items take (49 * 2 == 98)
+      //III - than 	subtract that from 100% to know find out how much space is left for margins (100% - 98% == 2%)
+
+      //I.1 - same as I and multiplay that by 2 to get how many margins should be set (2 * 2 == 4)
+
+      //final - subtract III by I.1 to get left and right margin value in % (2 / 4 == 0.5%)
+
+      flexItemMargin = (100 - (flexItemBasis * Math.floor((100 / flexItemBasis)))) / (Math.floor((100 / flexItemBasis)) * 2);
+
+      if ((100 - (flexItemBasis * Math.floor((100 / flexItemBasis)))) <= 0) {
+         return;
+      }
+
+      $('.flex-item').css('margin-right', `${flexItemMargin}%`);
+      $('.flex-item').css('margin-left', `${flexItemMargin}%`);
+   }
+
+   flexMargins();
+
+   $(window).resize(function () {
+      flexMargins();
+   });
 });

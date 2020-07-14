@@ -2,6 +2,7 @@
    border: 3px solid $main-text;
    margin: 0 15%;
    margin-bottom: 3rem;
+   position: relative;
 
    .article-img {
 
@@ -68,9 +69,46 @@
 
 @media (min-width:1180px) {
    .home-article-two {
-      display: flex;
+      margin:0 1%;
+      margin-bottom: 3rem;
+      display:flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      background-color: transparent;
+
       .article-img {
-        overflow: auto;
+         position: absolute;
+         top:-15px;
+         left:10px;
+         width:60%;
+         z-index: -1;
       }
+
+      .article-content {
+         flex:0 0 40%;
+         width:40%;
+      }
+      
+   }
+   
+   .personally {
+      .home-article-two {
+         justify-content: flex-start;
+         align-items: flex-start;
+         .article-img {
+            top:-15px;
+            right:10px;
+            left:auto;
+            width:60%;
+         }
+      }
+
+   }
+}
+
+@media (min-width:1440px) {
+   .home-article-two {
+      margin:0 10%;
+      margin-bottom: 3rem;
    }
 }
