@@ -1,0 +1,139 @@
+.home-article-black {
+   margin: 0 5% 3rem;
+   position: relative;
+
+   .article-img {
+      &::after {
+         content: '';
+         display: block;
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba($void, 0);
+         transition: 0.3s ease;
+      }
+   }
+
+   .article-content {
+      background: $black-news;
+      padding: 4rem 5rem;
+
+      .article-category {
+         font-family: 'Lato', sans-serif;
+         font-weight: 700;
+         @include text-format(1.6rem, 3rem, 1.6px);
+         text-transform: uppercase;
+
+         a {
+            transition: 0.3s ease;
+            color: $link-hover;
+         }
+
+      }
+
+      .article-title {
+         @include text-format(2.4rem, 2.8rem);
+         font-family: 'FreightDispProBold-Regular';
+
+         a {
+            color: $blank;
+         }
+
+      }
+   }
+
+   &:hover {
+      .article-img {
+         &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($void, 0.2);
+         }
+      }
+
+      .article-content {
+         .article-category {
+            a {
+               color: $blank;
+            }
+         }
+      }
+   }
+}
+
+@media (min-width:960px) {
+   .black-news {
+      border-top: 3px solid $main-text;
+      border-bottom: 3px solid $main-text;
+      overflow: hidden;
+
+      .home-article-black {
+         margin: 0 5%;
+      }
+
+      .home-article-black:nth-of-type(2n+1) {
+         .article-img {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 60%;
+         }
+
+         .article-content {
+            position: absolute;
+            top: 50px;
+            left: 55%;
+            width: 30%;
+         }
+      }
+
+      .home-article-black:nth-of-type(2n+2) {
+         .article-img {
+            position: relative;
+            top: 0;
+            right: 0;
+            margin-left: auto;
+            width: 60%;
+         }
+
+         .article-content {
+            position: absolute;
+            top: 50px;
+            right: 55%;
+            width: 30%;
+         }
+      }
+   }
+}
+
+@media (min-width:992px) {
+.black-news {
+
+   .home-article-black {
+      margin: 0;
+   }
+
+   .border {
+      display: none;
+   }
+}
+
+
+}
+
+@media (min-width:1180px) {
+   .home-article-black {
+      .article-content {
+         .article-title {
+            @include text-format(3.6rem, 4rem);
+         }
+      }
+   }
+}

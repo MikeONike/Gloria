@@ -19,6 +19,9 @@ $(window).on('load', function () {
 
    var flexItemBasis;
 
+   // var newsletterInnerWidth = $('.newsletter-inner-box').outerWidth();
+   // var newsletterInnerHeight = $('.newsletter-inner-box').outerHeight();
+
    // var subMenuItems = $('.head-nav > ul > li > ul');
    // var menuItems = $('.head-nav > ul > li');
    // var menuItemsArray = menuItems.toArray();
@@ -340,4 +343,23 @@ $(window).on('load', function () {
    $(window).resize(function () {
       flexMargins();
    });
+
+
+   /////////////////////////////////////////////////////////
+
+   // function setOuterBoxDimensions() {
+   //    $('.newsletter .newsletter-outer-box').css({
+   //       'width': `${newsletterInnerWidth}px`,
+   //       'height': `${newsletterInnerHeight}px`
+   //    })
+   // }
+
+   // setOuterBoxDimensions();
+
+   // $(window).on('scroll', () => {
+   //    newsletterInnerWidth = $('.newsletter-inner-box').outerWidth();
+   //    newsletterInnerHeight = $('.newsletter-inner-box').outerHeight();
+   //    setOuterBoxDimensions();
+   // })
+
 });

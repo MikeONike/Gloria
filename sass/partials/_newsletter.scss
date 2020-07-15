@@ -1,0 +1,145 @@
+.newsletter {
+   margin: 0 5%;
+   margin-bottom: 3rem;
+
+   .newsletter-inner-box {
+      border: 4px solid $main-text;
+      padding: 2.5rem 2rem;
+      background: url('../img/bg/Newsletter.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &>div {
+         margin-bottom: 3rem;
+         position: relative;
+         z-index: 2;
+      }
+
+      .newsletter-form {
+         background-color: $void;
+         padding: 1.5rem;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+         position: relative;
+         z-index: 2;
+
+         input {
+            border: none;
+            padding: 7px 1.5rem;
+            font-family: 'FreightTextProBook-Regular';
+            @include text-format(1.6rem, 3rem);
+            display: block;
+            border-bottom: 2px solid $link-hover;
+            transition: 0.3s ease;
+         }
+
+         input[type="email"] {
+            margin-right: 1.5rem;
+            flex: 1;
+            min-width: 0;
+
+            &:focus {
+               outline: none;
+               background-color: darken($blank, 10%);
+               border-bottom-color: $void;
+            }
+         }
+
+         &>label {
+            position: relative;
+
+            &::after {
+               content: "\f30b";
+               font-family: "Font Awesome 5 Free";
+               font-weight: 900;
+               display: block;
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               color: $blank;
+               font-size: 2rem;
+            }
+         }
+
+         input[type="submit"] {
+            margin-right: 0;
+            background-color: $link-hover;
+            padding: 7px 4rem;
+            cursor: pointer;
+
+            &:hover {
+               outline: none;
+               background-color: $main-text;
+               border-bottom-color: $main-text;
+               color: $blank;
+            }
+         }
+      }
+
+
+      .newsletter-title {
+         color: $main-text;
+         font-family: 'Lato', sans-serif;
+         font-weight: 900;
+         @include text-format(3.8rem, 4.8rem);
+      }
+
+      .newsletter-text {
+         font-family: 'Lato', sans-serif;
+         font-weight: 900;
+         @include text-format(1.8rem, 2.4rem);
+         min-height: 0 !important;
+      }
+   }
+
+   .newsletter-outer-box {
+      display: none;
+   }
+}
+
+@media (min-width:768px) {
+   .newsletter {
+      position: relative;
+
+      .newsletter-inner-box {
+         flex-flow: row nowrap;
+         align-items: center;
+
+         &>div {
+            margin-bottom: 0;
+         }
+
+         .newsletter-form {
+            width:auto;
+            min-width: 400px;
+
+         }
+      }
+
+      .newsletter-outer-box {
+         z-index: 1 ;
+         border: 4px solid $main-text;
+         display: block;
+         position: absolute;
+         top: 1rem;
+         left: 1rem;
+         right: -1rem;
+         bottom: -1rem;
+      }
+   }
+}
+
+@media (min-width:992px) {
+   .newsletter {
+      margin: 0 0 3rem 0;
+      
+   }
+}

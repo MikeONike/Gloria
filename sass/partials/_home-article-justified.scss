@@ -15,6 +15,7 @@
    .healthy-articles {
       .home-main-articles-section {
          .healthy-article {
+
             .article-category {
                background-color: $healthy-title;
                display: inline-block;
@@ -28,6 +29,7 @@
             }
 
             .post-format {
+               clip-path: polygon(0 0, 100% 0, 0 100%);
                i {
                   display: none;
                }
