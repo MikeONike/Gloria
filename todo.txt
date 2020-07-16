@@ -1,0 +1,12 @@
+---->1.	from 960px width border {display:none} u black news
+
+2.	post format in last home-lead section is on top. 
+	Should be on bottom
+
+---->3. 	home article less padding
+
+---->4.	home-articles margin should be 8.33 not 15
+
+---->5.	problem with black box news
+
+---->6.  three news should not break into two
