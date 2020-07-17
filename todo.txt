@@ -10,3 +10,7 @@
 ---->5.	problem with black box news
 
 ---->6.  three news should not break into two
+
+7.  catogry name positioned absolute on top of logo
+
+8.  subcategory part oh the header

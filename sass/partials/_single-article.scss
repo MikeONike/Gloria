@@ -1,0 +1,254 @@
+.single-article {
+   padding: 0 1rem;
+
+   .single-article-header {
+      padding: 0 1rem;
+
+      .single-article-lead-img {
+         margin-bottom: 3rem;
+      }
+
+      .single-article-header-content {
+         display: flex;
+         align-items: center;
+         flex-flow: column nowrap;
+         text-align: center;
+      }
+
+      .single-article-sub-title {
+         font-family: 'Lato', sans-serif;
+         font-weight: 900;
+         @include text-format(1.8rem, 3rem, 1.8px);
+         text-transform: uppercase;
+         margin-bottom: 1rem;
+      }
+
+      .single-article-title {
+         font-family: 'FreightDispProBold-Regular';
+         @include text-format(2.8rem, 2.8rem, 1.8px);
+         margin-bottom: 2rem;
+         text-transform: uppercase;
+      }
+
+      .single-article-info {
+         font-family: 'Lato', sans-serif;
+         @include text-format(1.4rem, 3rem);
+         color: $sublink-color;
+      }
+
+      .single-article-author {
+         font-family: 'Lato', sans-serif;
+         @include text-format(1.4rem, 3rem);
+         color: $sublink-color;
+         margin-bottom: 2rem;
+      }
+   }
+
+   .single-article-content {
+      padding: 0 1rem;
+      margin-bottom: 1.9rem;
+
+      h4 {
+         font-family: 'FreightDispProBold-Regular';
+         @include text-format(1.9rem, 3rem);
+         margin-bottom: 1.9rem;
+      }
+
+      p {
+         font-family: 'FreightTextProBook-Regular';
+         @include text-format(1.9rem, 3rem);
+         margin-bottom: 1.9rem;
+      }
+
+      figure {
+         margin-bottom: 5rem;
+
+         div {
+            text-align: right;
+            margin-bottom: 5px;
+         }
+
+         p {
+            font-family: 'Lato', sans-serif;
+            @include text-format(1.4rem, 2rem);
+            color: $sublink-color;
+         }
+
+         span {
+            font-family: 'Lato', sans-serif;
+            @include text-format(1.2rem, 2.8rem);
+            color: $span-color;
+         }
+      }
+
+      blockquote {
+         font-family: 'FreightTextProBook-Regular';
+         @include text-format(2rem, 3rem);
+         margin-bottom: 5.5rem;
+         text-align: center;
+         position: relative;
+         padding-top: 2.6rem;
+
+         &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 5px;
+            background-color: $link-hover;
+         }
+      }
+   }
+
+   .single-article-read-also {
+      padding: 0 1rem;
+
+      .single-article-read-also-title {
+         font-family: 'FreightDispProBold-Regular';
+         font-weight: bold;
+         @include text-format(1.9rem, 3rem);
+         margin-bottom: 1.9rem;
+      }
+      
+      .single-article-read-also-links {
+         li {
+            @include text-format(1.9rem, 3rem);
+            font-family: 'FreightTextProBook-Regular';
+            margin-bottom: 1.9rem;
+
+            a {
+               color: $link-hover;
+               transition: 0.3s ease;
+
+               &:hover {
+                  text-decoration: underline;
+                  color: $void;
+               }
+            }
+         }
+      }
+   }
+
+   .single-article-tags {
+      margin-bottom: 2.5rem;
+      padding: 1rem 1rem;
+      display:flex;
+      align-items: flex-start;
+      flex-flow: column nowrap;
+      border-top:1px solid $span-color;
+      border-bottom:1px solid $span-color;
+
+      .single-article-tags-title {
+         font-family: 'Lato', sans-serif;
+         font-weight: 700;
+         @include text-format(1.8rem, 2.4rem );
+         margin:0 1rem 1rem 0;
+      }
+      .single-article-tags-items {
+         font-family: 'Lato', sans-serif;
+         @include text-format(1rem, 1rem );
+         display: flex;
+         flex-wrap: wrap;
+         li {
+            margin:0 5px 5px 0;
+            a {
+               padding:5px 1rem;
+               color: $sublink-color;
+               background-color: $top-footer-bg;
+               transition: 0.3s ease;
+               
+               &:hover {
+                  color: $blank;
+                  background-color: $main-text; 
+               }
+            }
+         }
+         
+      }
+
+   }
+
+   .single-article-social-nav {
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      ul {
+         display:flex;
+         align-items: center;
+         justify-content: center;
+         flex-wrap: wrap;
+
+         li {
+            text-align: center;
+            margin:0 5px 5px 0;
+            a {
+               width:42px;
+               height:42px;
+               border-radius: 50%;
+               font-size: 2rem;
+               line-height: 42px;
+               color:$blank;
+            }
+         }
+
+         li:nth-of-type(1) {
+            a {
+               background-color: #3B5998;
+            }
+         }
+         li:nth-of-type(2) {
+            a {
+               background-color: #1DA1F2;
+            }
+         }
+         li:nth-of-type(3) {
+            a {
+               background-color: #CB2027;
+            }
+         }
+         li:nth-of-type(4) {
+            a {
+               background-color: #4DC247;
+            }
+         }
+         li:nth-of-type(5) {
+            a {
+               background-color: #7B519D;
+            }
+         }
+         li:nth-of-type(6) {
+            a {
+               background-color: #DB4437;
+            }
+         }
+      }
+   }
+
+   .single-article-ad {
+      padding:0 1rem;
+      margin-bottom: 2.5rem;
+   }
+
+   .single-article-more {
+      .single-article-more-title {
+         display:flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-bottom: 3rem;
+         p {
+            font-family: 'FreightTextProBook-Regular'; 
+            @include text-format(1.8rem, 3rem );
+            text-transform: uppercase;
+            font-weight: 600;
+         }
+         img {
+            width:60px;
+            height:30px;
+         }
+      }
+   }
+}

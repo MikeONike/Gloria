@@ -9,7 +9,7 @@
    }
 
    .bottom-header {
-     
+
 
       s .head-nav {
          &>ul {
@@ -64,7 +64,7 @@
    left: 0;
    width: 100%;
    z-index: 19;
-   margin-bottom:3.1rem;
+   margin-bottom: 3.1rem;
 
    // top header
    .top-header {
@@ -72,11 +72,13 @@
       align-items: center;
       justify-content: center;
       padding: 2.8rem;
+      position: relative;
 
       a.logo {
          width: 163px;
          height: 72px;
          position: relative;
+         cursor: pointer;
 
          &::after {
             content: '';
@@ -86,9 +88,42 @@
             left: 0;
             bottom: 0;
             right: 0;
-            background: url('../img/svg/logo/gloria-logo.svg');
+            background-image: url('../img/svg/logo/gloria-logo.svg');
             background-repeat: no-repeat;
             background-position: center center;
+         }
+
+         &:hover+.category-title {
+            transform: translate(-50%, -50%) scaleX(1.3);
+            opacity: 0;
+            visibility: hidden;
+         }
+      }
+
+      a.logo.cat-logo {
+         &::after {
+            opacity: 0.1;
+         }
+      }
+
+      p.category-title {
+         position: absolute;
+         display: block;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         @include text-format(2rem, 3rem, 2rem);
+         color: $link-hover;
+         text-transform: uppercase;
+         font-family: 'Lato', sans-serif;
+         text-align: center;
+         padding-left: 2rem;
+         transition: 0.3s ease;
+
+         &:hover {
+            transform: translate(-50%, -50%) scaleX(1.3);
+            opacity: 0;
+            visibility: hidden;
          }
       }
 
@@ -353,9 +388,72 @@
             font-size: 2rem;
          }
       }
+   }
 
+   .sub-category-header {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background-color: $main-text;
+      transition: 0.3s ease;
+      overflow: hidden;
 
+      ul {
+         display: flex;
+         justify-content: center;
+         align-items: center;
 
+         li {
+            text-transform: uppercase;
+            @include text-format(1.8rem, 2rem, 1.8px);
+            font-family: 'Lato', sans-serif;
+
+            a {
+               color: $blank;
+               padding: 1.6rem 2rem;
+               transition: 0.3s ease;
+               position: relative;
+
+               &:hover {
+                  color: $link-hover;
+               }
+
+               &::after {
+                  content: '';
+                  transition: 0.15s ease;
+                  display: block;
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 0;
+                  background: #ff3948;
+               }
+            }
+
+         }
+
+      }
+   }
+}
+
+.sub-category {
+   .top-header {
+      p.category-title {
+         display:none;
+      }
+   }
+}
+
+.home {
+   .top-header {
+      p.category-title {
+         display:none;
+      }
+   }
+
+   .sub-category-header {
+      display: none;
    }
 }
 
@@ -370,7 +468,7 @@
       }
 
       .bottom-header {
-         
+
          .head-nav {
             &>ul {
                &>li {
@@ -419,7 +517,7 @@
 
    .header {
       position: relative;
-      border-bottom: $void 3px solid;
+      border-bottom: $main-text 3px solid;
 
       .top-header {
          display: flex;
@@ -429,7 +527,7 @@
          // position: relative;
          padding: 0;
          align-items: flex-end;
-         border:none;
+         border: none;
 
          .ham-menu {
             display: none;
@@ -540,12 +638,27 @@
             }
          }
       }
+
+      .sub-category-header {
+         display: flex;
+      }
    }
 
+   .home {
+      .sub-category-header {
+         display: none;
+      }
+   }
 }
 
 @media (min-width:1180px) {
    .header {
+      .top-header {
+         p.category-title {
+            @include text-format(3rem, 3rem, 2rem);
+         }
+      }
+
       .bottom-header {
 
          .head-home {
@@ -568,6 +681,36 @@
                &>li {
                   a {
                      font-size: 1.8rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width:1440px) {
+   .header {
+      .bottom-header {
+         .head-nav {
+            &>ul {
+               &>li {
+                  a {
+                     padding: 1.1rem 15px 2rem;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .header-fixed {
+      .bottom-header {
+         .head-nav {
+            &>ul {
+               &>li {
+                  a {
+                     padding: 1.1rem 15px !important;
                   }
                }
             }

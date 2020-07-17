@@ -19,6 +19,11 @@ $(window).on('load', function () {
 
    var flexItemBasis;
 
+   var subCategoryHeader = $('.sub-category-header');
+   var subCategoryHeaderHeight = $('.sub-category-header')[0].scrollHeight;
+
+   var windowScrollTop = $(window).scrollTop();
+
    // var newsletterInnerWidth = $('.newsletter-inner-box').outerWidth();
    // var newsletterInnerHeight = $('.newsletter-inner-box').outerHeight();
 
@@ -248,7 +253,7 @@ $(window).on('load', function () {
       $postformat.css('top', `-22px`);
 
       $('.sub-category .post-format').css({
-         'bottom': '-23px', 
+         'bottom': '-23px',
          'top': ''
       })
 
@@ -266,7 +271,7 @@ $(window).on('load', function () {
          });
 
       }
-     
+
    }
 
    for (var i = 0; i < $('.home-article').length; i++) {
@@ -375,5 +380,28 @@ $(window).on('load', function () {
    //    newsletterInnerHeight = $('.newsletter-inner-box').outerHeight();
    //    setOuterBoxDimensions();
    // })
+
+   /////////////////////////////////////////////////////////////////
+   // subcategory header hide on scroll down and show on scroll up
+   /////////////////////////////////////////////////////////////////
+
+   function subCatHeaderHide() {
+      subCategoryHeader.css('height', `0`);
+   }
+
+   function subCatHeaderShow() {
+      subCategoryHeader.css('height', `${subCategoryHeaderHeight}px`);
+   }
+
+   $(window).on('scroll', function () {
+      if ($(window).scrollTop() >= 69) {
+         if ($(window).scrollTop() > windowScrollTop) {
+            subCatHeaderHide();
+         } else {
+            subCatHeaderShow();
+         }
+      }
+      windowScrollTop = $(window).scrollTop();
+   })
 
 });
