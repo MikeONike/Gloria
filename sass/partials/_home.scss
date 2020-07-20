@@ -136,6 +136,39 @@
    }
 }
 
+.trends {
+   text-align:center;
+   .trends-title {
+      margin-bottom: 5rem;
+      font-family: 'Lato', sans-serif;
+      font-weight: 900;
+      @include text-format(1.8rem, 3rem, 7.2px);
+      text-transform: uppercase;
+      span.trends-title-number {
+         font-family: 'FreightDispProSemibold-Regular';
+         font-size: 7.2rem;
+         color:$main-text;
+      }
+      span {
+         color:$link-hover;
+         font-style:italic;
+         text-transform: lowercase;
+         font-weight: 300;
+      }
+   }
+
+   .home-article {
+      .count {
+         position: absolute;
+         top:0;
+         left:50%;
+         font-family: 'FreightDispProBold-Regular';
+         color:$link-hover;
+         font-size: 3.5rem;
+         transform: translate(-50%, -50%);   
+      }
+   }
+}
 
 .home-main {
    margin-top: 30px;
@@ -166,10 +199,13 @@
    }
 }
 
+
+
+
 @media (min-width:576px) {
 
    .three-articles {
-
+      
       .home-article {
          flex: 0 0 31% !important;
          width: 31% !important;
@@ -198,6 +234,14 @@
             // flex:0 0 48% !important;
             // width: 48% !important;
          }
+      }
+   }
+
+   .five-articles {
+      margin:0 10% !important;
+      .home-article {
+         flex: 0 0 100% !important;
+         width:100% !important;
       }
    }
 }
@@ -321,9 +365,15 @@
             }
          }
       }
+   } 
 
-
+   .two-articles {
+      .home-article {
+         flex: 0 0 48% !important;
+         width:48% !important;
+      }
    }
+}
 
    @media (min-width:960px) {
       .home-main {
@@ -335,6 +385,13 @@
                   }
                }
             }
+         }
+      }
+
+      .five-articles {
+         .home-article {
+            flex: 0 0 18% !important;
+            width:18% !important;
          }
       }
    }
@@ -373,4 +430,3 @@
          }
       }
    }
-}

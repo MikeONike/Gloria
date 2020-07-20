@@ -23,6 +23,8 @@ $(window).on('load', function () {
    var subCategoryHeaderHeight = $('.sub-category-header')[0].scrollHeight;
 
    var windowScrollTop = $(window).scrollTop();
+   var contentAdImgOffsetTop = $('.single-article-content-ad').offset().top;
+   var distance;
 
    // var newsletterInnerWidth = $('.newsletter-inner-box').outerWidth();
    // var newsletterInnerHeight = $('.newsletter-inner-box').outerHeight();
@@ -404,4 +406,58 @@ $(window).on('load', function () {
       windowScrollTop = $(window).scrollTop();
    })
 
+   /////////////////////////////////////
+   // ad fixed on scroll
+   /////////////////////////////////////
+
+   distance = contentAdImgOffsetTop - windowScrollTop;
+   if (windowScrollTop >= $('.single-article-content-ad').outerHeight() - $('.single-article-content-ad a').outerHeight()) {
+      $('.single-article-content-ad a').css({
+         'top': '',
+         'bottom': 0
+      });
+   }
+
+   if (windowScrollTop >= contentAdImgOffsetTop) {
+      $('.single-article-content-ad a').css({
+         'top': `${Math.abs(distance)}px`,
+         'bottom': ''
+      });
+   }
+
+   $(window).on('scroll', () => {
+      windowScrollTop = $(window).scrollTop();
+      contentAdImgOffsetTop = $('.single-article-content-ad').offset().top;
+      distance = contentAdImgOffsetTop - windowScrollTop;
+
+      if (windowScrollTop >= $('.single-article-content-ad').outerHeight() - $('.single-article-content-ad a').outerHeight()) {
+         $('.single-article-content-ad a').css({
+            'top': '',
+            'bottom': 0
+         });
+         return;
+      }
+
+      if (windowScrollTop >= contentAdImgOffsetTop) {
+         $('.single-article-content-ad a').css({
+            'top': `${Math.abs(distance)}px`,
+            'bottom': ''
+         });
+      }
+
+
+
+
+
+   })
+
 });
+
+
+// $('.single-article-content-ad a').css({
+//    'position': 'fixed',
+//    'top': 0,
+//    'right': `${Number($('.container').css('margin-right').replace('px', '')) + Number($('.container').css('padding-right').replace('px', ''))}px`,
+//    'left': `${$('.single-article-content').outerWidth() + Number($('.container').css('margin-left').replace('px', ''))}px`
+// })
+// console.log(1)

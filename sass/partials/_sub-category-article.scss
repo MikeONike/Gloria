@@ -135,7 +135,16 @@
 
 @media (min-width:768px) {
    .sub-category {
+
+      .sub-category-content {
+         display:flex;
+         justify-content: space-between;
+         align-items: stretch;
+      }
+
       .sub-category-articles {
+         flex:0 0 75%;
+         max-width:75%;
          .home-main-articles-section {
             .home-article {
                .article-content {

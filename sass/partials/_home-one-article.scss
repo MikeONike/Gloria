@@ -1,0 +1,9 @@
+@media (min-width:576px) {
+   .one-article {
+      justify-content: flex-start !important;
+      .home-article {
+         flex: 0 0 66% !important;
+         width:66% !important
+      }
+   }
+}
