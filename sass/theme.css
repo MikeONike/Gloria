@@ -1345,11 +1345,15 @@ strong {
 
 .home-article .article-content .post-format {
   position: absolute;
-  width: 45px;
-  height: 45px;
+  width: 60px;
+  height: 60px;
   background: #fff;
-  -webkit-transform: rotateZ(45deg);
-          transform: rotateZ(45deg);
+  top: 0;
+  left: 50%;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1359,11 +1363,11 @@ strong {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%, 50% 0);
+          clip-path: polygon(0 50%, 50% 100%, 100% 50%, 50% 0);
 }
 
 .home-article .article-content .post-format i {
-  -webkit-transform: rotateZ(-45deg);
-          transform: rotateZ(-45deg);
   font-size: 1.8rem;
 }
 
@@ -1804,8 +1808,10 @@ strong {
 }
 
 .healthy .healthy-articles .home-main-articles-section .healthy-article .post-format {
-  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 0 100%);
+  -webkit-clip-path: none;
+          clip-path: none;
+  -webkit-clip-path: polygon(0 50%, 50% 0, 100% 50%);
+          clip-path: polygon(0 50%, 50% 0, 100% 50%);
 }
 
 .healthy .healthy-articles .home-main-articles-section .healthy-article .post-format i {
@@ -2368,6 +2374,11 @@ strong {
           justify-content: flex-start;
 }
 
+.sub-category .sub-category-articles .home-main-articles-section .home-article .post-format {
+  bottom: 0;
+  left: 0;
+}
+
 .sub-category .sub-category-articles .border {
   max-width: 100%;
 }
@@ -2920,6 +2931,63 @@ strong {
         -ms-flex: 0 0 66% !important;
             flex: 0 0 66% !important;
     width: 66% !important;
+  }
+}
+
+.terms-of-use {
+  padding: 0 2rem;
+}
+
+.terms-of-use > *:first-child {
+  padding-top: 5rem;
+}
+
+.terms-of-use h2 {
+  font-family: 'FreightDispProBold-Regular';
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: normal;
+  margin-bottom: 2.4rem;
+}
+
+.terms-of-use p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  line-height: 3rem;
+  letter-spacing: normal;
+  margin-bottom: 1.9rem;
+}
+
+.terms-of-use h3 {
+  font-family: 'FreightDispProBold-Regular';
+  font-size: 2rem;
+  line-height: 2.6rem;
+  letter-spacing: normal;
+  margin-bottom: 2rem;
+}
+
+.terms-of-use ul li {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 3rem;
+  letter-spacing: normal;
+  margin-bottom: 1.9rem;
+}
+
+@media (min-width: 960px) {
+  .terms-of-use {
+    max-width: 75%;
+  }
+  .terms-of-use > * {
+    padding-left: 20%;
+  }
+}
+
+@media (min-width: 960px) {
+  .terms-of-use > * {
+    padding-left: 20%;
   }
 }
 /*# sourceMappingURL=theme.css.map */

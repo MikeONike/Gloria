@@ -29,7 +29,8 @@
             }
 
             .post-format {
-               clip-path: polygon(0 0, 100% 0, 0 100%);
+               clip-path: none;
+               clip-path: polygon(0 50%, 50% 0, 100% 50%);
                i {
                   display: none;
                }
