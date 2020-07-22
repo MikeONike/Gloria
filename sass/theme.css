@@ -2574,6 +2574,17 @@ strong {
   margin-bottom: 1.9rem;
 }
 
+.single-article .single-article-content iframe {
+  margin: 0 auto 3rem;
+  display: block;
+  max-width: 100%;
+}
+
+.single-article .single-article-content iframe.instagram-media {
+  margin: 0 auto 3rem !important;
+  min-width: 0 !important;
+}
+
 .single-article .single-article-content h4 {
   font-family: 'FreightDispProBold-Regular';
   font-size: 1.9rem;
@@ -2637,6 +2648,15 @@ strong {
   width: 180px;
   height: 5px;
   background-color: #ff3948;
+}
+
+.single-article .single-article-content blockquote.instagram-media {
+  margin: 0 auto 3rem !important;
+  min-width: 261px !important;
+}
+
+.single-article .single-article-content blockquote.instagram-media::after {
+  display: none;
 }
 
 .single-article .single-article-read-also {

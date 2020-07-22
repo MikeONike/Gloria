@@ -62,6 +62,19 @@
       padding: 0 1rem;
       margin-bottom: 1.9rem;
 
+      iframe {
+         // width:100%;
+         margin: 0 auto 3rem;
+         display: block;
+         max-width: 100%;
+
+         
+         &.instagram-media {
+            margin: 0 auto 3rem !important;
+            min-width: 0 !important;
+         }
+      }
+
       h4 {
          font-family: 'FreightDispProBold-Regular';
          @include text-format(1.9rem, 3rem);
@@ -114,7 +127,17 @@
             height: 5px;
             background-color: $link-hover;
          }
+
+         &.instagram-media {
+            margin: 0 auto 3rem !important;
+            min-width: 261px !important;
+            &::after {
+               display: none;
+            }
+         }
+
       }
+
    }
 
    .single-article-read-also {
