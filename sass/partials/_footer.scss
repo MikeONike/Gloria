@@ -167,14 +167,15 @@
                }
 
                input,
-               a {
+               button {
                   @include text-format(1.6rem, 3rem);
                   display: block;
+                  border:none;
                   border-bottom: 2px solid $link-hover;
                   transition: 0.3s ease;
                }
 
-               a {
+               button {
                   font-size: 2rem;
                   padding: 7px 2.5rem;
                   color: $blank;
@@ -183,6 +184,7 @@
                   &:hover {
                      border-bottom-color: $void;
                      background-color: $void;
+                     cursor: pointer;
                   }
 
                }

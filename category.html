@@ -21,7 +21,7 @@
    <title>Vodeci lifestyle portal - Gloria</title>
 
    <!-- SASS file -->
-   <link rel="stylesheet" href="sass/theme.css">
+   <link rel="stylesheet" href="css/theme.css">
 
 </head>
 
@@ -35,7 +35,11 @@
 
          <!-- top header start -->
          <div class="top-header">
-            <a class="logo cat-logo" href="index.html"></a>
+            <a class="logo cat-logo" href="index.html">
+               <img src="img/svg/logo/gloria-logo.svg" alt="">
+            </a>
+
+            <!-- Naslov kategorije. Prikazuje se samo na stranicama pojedinacne kategorije a na ostalim stranicama se ne prikazuje -->
             <p class="category-title">fokus</p>
          </div><!-- top header end -->
 
@@ -52,17 +56,18 @@
             <!-- header link navigation -->
             <div class="head-home">
                <a href="index.html">
+                  <img src="img/svg/logo/gloria-logo.svg" alt="">
                   <span class="head-home-text">početna</span>
                </a>
             </div>
             <nav class="head-nav">
-               <ul>
+               <ul class="head-nav-main-menu">
                   <li class="active-cat">
                      <a href="#">
                         <span>fokus</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">priče</a></li>
                         <li><a href="">dogadjanja</a></li>
                         <li><a href="">zvezdane staza</a></li>
@@ -74,7 +79,7 @@
                         <span>moda</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">novosti</a></li>
                         <li><a href="">trendovi</a></li>
                         <li><a href="">inspiracija</a></li>
@@ -85,7 +90,7 @@
                         <span>lepota</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">novosti</a></li>
                         <li><a href="">lice</a></li>
                         <li><a href="">telo</a></li>
@@ -99,7 +104,7 @@
                         <span>život</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">preporuke</a></li>
                         <li><a href="">kultura</a></li>
                         <li><a href="">dizajn &amp; kultura</a></li>
@@ -116,7 +121,7 @@
                         <span>video</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">zvezdane staze</a></li>
                      </ul>
                   </li>
@@ -125,7 +130,7 @@
                         <span>appeal</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">expert</a></li>
                      </ul>
                   </li>
@@ -151,7 +156,7 @@
                <form action="index.html" method="GET">
                   <div class="header-search-input">
                      <input type="search" name="search" value="" placeholder="Pretraži Gloria.rs">
-                     <a href="#" class="fas fa-search"></a>
+                     <button type="submit" class="fas fa-search"></button>
                   </div>
                   <a href="#" class="fas fa-search"></a>
                </form>
@@ -185,11 +190,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper"></i>
                         </div>
@@ -203,11 +208,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper"></i>
                         </div>
@@ -221,11 +226,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper"></i>
                         </div>
@@ -242,11 +247,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper"></i>
                         </div>
@@ -265,12 +270,12 @@
                      <p class="article-category">
                         <a href="#/1">fokus</a>
                      </p>
-                     <h1 class="article-title">
+                     <h2 class="article-title">
                         <a href="#/2">
                            Što jedu balerine? Zvijezda HNK otkrila nam svoje navike i recept za najbolje ljetno
                            osvježenje
                         </a>
-                     </h1>
+                     </h2>
                      <div class="post-format">
                         <i class="far fa-newspaper"></i>
                      </div>
@@ -301,11 +306,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="count">
                            <p>1</p>
                         </div>
@@ -319,11 +324,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="count">
                            <p>2</p>
                         </div>
@@ -337,11 +342,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="count">
                            <p>3</p>
                         </div>
@@ -355,11 +360,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="count">
                            <p>4</p>
                         </div>
@@ -373,11 +378,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="count">
                            <p>5</p>
                         </div>
@@ -402,11 +407,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper" aria-hidden="true"></i>
                         </div>
@@ -420,11 +425,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper" aria-hidden="true"></i>
                         </div>
@@ -450,11 +455,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper" aria-hidden="true"></i>
                         </div>
@@ -468,11 +473,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper" aria-hidden="true"></i>
                         </div>
@@ -486,11 +491,11 @@
                         <p class="article-category">
                            <a href="#">telo</a>
                         </p>
-                        <h1 class="article-title">
+                        <h2 class="article-title">
                            <a href="#">
                               Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
                            </a>
-                        </h1>
+                        </h2>
                         <div class="post-format">
                            <i class="far fa-newspaper" aria-hidden="true"></i>
                         </div>
@@ -536,14 +541,14 @@
                   </nav>
                </div>
 
-               <!-- top footer left navigation -->
+               <!-- top footer left navigation start -->
                <nav class="top-footer-left-nav">
-                  <ul>
+                  <ul class="footer-nav-menu">
                      <li>
                         <a href="#">
                            fokus
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">priče</a></li>
                            <li><a href="">dogadjanja</a></li>
                            <li><a href="">zvezdane staza</a></li>
@@ -554,7 +559,7 @@
                         <a href="#">
                            moda
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">novosti</a></li>
                            <li><a href="">trendovi</a></li>
                            <li><a href="">inspiracija</a></li>
@@ -564,7 +569,7 @@
                         <a href="#">
                            lepota
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">novosti</a></li>
                            <li><a href="">lice</a></li>
                            <li><a href="">telo</a></li>
@@ -577,7 +582,7 @@
                         <a href="#">
                            život
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">preporuke</a></li>
                            <li><a href="">kultura</a></li>
                            <li><a href="">dizajn &amp; kultura</a></li>
@@ -592,7 +597,7 @@
                         <a href="#">
                            video
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">zvezdane staze</a></li>
                         </ul>
                      </li>
@@ -600,7 +605,7 @@
                         <a href="#">
                            appeal
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">expert</a></li>
                         </ul>
                      </li>
@@ -610,7 +615,7 @@
                         </a>
                      </li>
                   </ul>
-               </nav>
+               </nav><!-- top footer left navigation end -->
             </div>
 
             <!-- top footer newsletter -->
@@ -623,7 +628,7 @@
                   <form action="index.html" method="GET">
                      <div class="newsletter-form-input">
                         <input type="search" name="search" value="" placeholder="Upisite svoj e-mail">
-                        <a href="#" class="fas fa-long-arrow-alt-right"></a>
+                        <button type="submit" class="fas fa-long-arrow-alt-right"></button>
                      </div>
                   </form>
                </div>

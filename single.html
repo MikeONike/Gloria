@@ -21,7 +21,7 @@
    <title>Vodeci lifestyle portal - Gloria</title>
 
    <!-- SASS file -->
-   <link rel="stylesheet" href="sass/theme.css">
+   <link rel="stylesheet" href="css/theme.css">
 
 </head>
 
@@ -35,7 +35,11 @@
 
          <!-- top header start -->
          <div class="top-header">
-            <a class="logo" href="index.html"></a>
+            <a class="logo" href="index.html">
+               <img src="img/svg/logo/gloria-logo.svg" alt="">
+            </a>
+
+            <!-- Naslov kategorije. Prikazuje se samo na stranicama pojedinacne kategorije a na ostalim stranicama se ne prikazuje -->
             <p class="category-title">fokus</p>
          </div><!-- top header end -->
 
@@ -52,18 +56,19 @@
             <!-- header link navigation -->
             <div class="head-home">
                <a href="index.html">
+                  <img src="img/svg/logo/gloria-logo.svg" alt="">
                   <span class="head-home-text">početna</span>
                </a>
             </div>
             <nav class="head-nav">
-               <ul>
+               <ul class="head-nav-main-menu">
                   <li class="active-cat">
                      <a href="#">
                         <span>fokus</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
-                        <li class="active-sub-cat"><a href="">priče</a></li>
+                     <ul class="head-nav-sub-menu">
+                        <li><a href="">priče</a></li>
                         <li><a href="">dogadjanja</a></li>
                         <li><a href="">zvezdane staza</a></li>
                         <li><a href="">s kraljevskog dvora</a></li>
@@ -74,7 +79,7 @@
                         <span>moda</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">novosti</a></li>
                         <li><a href="">trendovi</a></li>
                         <li><a href="">inspiracija</a></li>
@@ -85,7 +90,7 @@
                         <span>lepota</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">novosti</a></li>
                         <li><a href="">lice</a></li>
                         <li><a href="">telo</a></li>
@@ -99,7 +104,7 @@
                         <span>život</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">preporuke</a></li>
                         <li><a href="">kultura</a></li>
                         <li><a href="">dizajn &amp; kultura</a></li>
@@ -116,7 +121,7 @@
                         <span>video</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">zvezdane staze</a></li>
                      </ul>
                   </li>
@@ -125,7 +130,7 @@
                         <span>appeal</span>
                         <span class="fas fa-sort-down"></span>
                      </a>
-                     <ul>
+                     <ul class="head-nav-sub-menu">
                         <li><a href="">expert</a></li>
                      </ul>
                   </li>
@@ -151,7 +156,7 @@
                <form action="index.html" method="GET">
                   <div class="header-search-input">
                      <input type="search" name="search" value="" placeholder="Pretraži Gloria.rs">
-                     <a href="#" class="fas fa-search"></a>
+                     <button type="submit" class="fas fa-search"></button>
                   </div>
                   <a href="#" class="fas fa-search"></a>
                </form>
@@ -203,176 +208,305 @@
                </div>
             </div><!-- single article header end -->
 
-            <!-- single article main start -->
-            <div class="single-article-main">
+            <div class="single-article-main-sidebar">
+               <div class="single-article-main-sidebar-left">
+                  <!-- single article main start -->
+                  <div class="single-article-main">
 
-               <!-- single article content start -->
-               <div class="single-article-content">
-                  <p>
-                     Podvodni model, studentica marketinga i komunikacije, a uskoro i instruktorica ronjenja - sve je to
-                     <strong>Kristina Ivanuš</strong> (21), koja je od 200 nominiranih diljem svijeta ušla među osam
-                     finalista za osvajanje
-                     nagrade <strong>Hermann Gmeiner</strong>, nazvanu prema prvom osnivaču <strong>SOS Dječjeg sela u
-                        svijetu</strong>. Dodjeljuje se osobi
-                     odrasloj u SOS Dječjem selu koja je, unatoč životnim teškoćama, postala uzornom i izvanrednom na
-                     društvenom, kulturnom, sportskom ili profesionalnom polju.
-                  </p>
-                  <p>
-                     Kristina je posebna po tome što je uz pomoć sporta, snažne volje i upornosti preboljela
-                     poliradikuloneuropatiju, bolest perifernih živaca, zbog koje je kao djevojčica otežano hodala. U SOS
-                     Dječjem selu Lekenik bila je od četvrte do petnaeste godine, potom u SOS Zajednici mladih Velika
-                     Gorica,
-                     gdje je ostala do završetka srednje ekonomske škole, a danas živi u Studentskom domu Stjepan Radić.
-                     Odlazak iz Kraljevca na Sutli, gdje joj živi majka Željena s kojom je u bliskom kontaktu, dobro pamti.
-                  </p>
-                  <p>
-                     S pet godina starijom sestrom Anamarijom živjela je u obitelji sa šestero djece i SOS-mamom, a dane je
-                     provodila svirajući violinu, vozeći bicikl, penjući se po drveću... Sa šest godina igru su, nakon
-                     šokantne dijagnoze, zamijenili posjeti bolnicama.
-                  </p>
-   
-   
-                  <figure>
-                     <img src="img/single-news-article/single-img-01.jpg" alt="">
-                     <div>
-                        <i class="fas fa-camera"></i>
-                        <span>Ivana Nobilo / Hanza Media</span>
-                     </div>
-                     <p>
-                        Svestrana Kristina Ivanuš Kika školuje se i za voditeljicu ronjenja u sklopu projekta plavo
-                        ronilačko
-                        srce RK 'Roniti se mora'.
-                     </p>
-                  </figure>
-   
-                  <blockquote>
-                     BOLEST MI JE POSLUŽILA KAO MOTIVACIJA DA SE POČNEM BAVITI SPORTOM.
-                  </blockquote>
+                     <!-- single article content start -->
+                     <div class="single-article-content">
+                        <p>
+                           Podvodni model, studentica marketinga i komunikacije, a uskoro i instruktorica ronjenja - sve
+                           je
+                           to
+                           <strong>Kristina Ivanuš</strong> (21), koja je od 200 nominiranih diljem svijeta ušla među
+                           osam
+                           finalista za osvajanje
+                           nagrade <strong>Hermann Gmeiner</strong>, nazvanu prema prvom osnivaču <strong>SOS Dječjeg
+                              sela
+                              u
+                              svijetu</strong>. Dodjeljuje se osobi
+                           odrasloj u SOS Dječjem selu koja je, unatoč životnim teškoćama, postala uzornom i izvanrednom
+                           na
+                           društvenom, kulturnom, sportskom ili profesionalnom polju.
+                        </p>
+                        <p>
+                           Kristina je posebna po tome što je uz pomoć sporta, snažne volje i upornosti preboljela
+                           poliradikuloneuropatiju, bolest perifernih živaca, zbog koje je kao djevojčica otežano
+                           hodala. U
+                           SOS
+                           Dječjem selu Lekenik bila je od četvrte do petnaeste godine, potom u SOS Zajednici mladih
+                           Velika
+                           Gorica,
+                           gdje je ostala do završetka srednje ekonomske škole, a danas živi u Studentskom domu Stjepan
+                           Radić.
+                           Odlazak iz Kraljevca na Sutli, gdje joj živi majka Željena s kojom je u bliskom kontaktu,
+                           dobro
+                           pamti.
+                        </p>
+                        <p>
+                           S pet godina starijom sestrom Anamarijom živjela je u obitelji sa šestero djece i SOS-mamom,
+                           a
+                           dane je
+                           provodila svirajući violinu, vozeći bicikl, penjući se po drveću... Sa šest godina igru su,
+                           nakon
+                           šokantne dijagnoze, zamijenili posjeti bolnicama.
+                        </p>
 
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/BHACKCNDMW8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   
-                  <p>
-                     - Padala sam jer do mozga mi ne bi došla informacija da treba zakoračiti, borila sam se s trncima u
-                     tijelu, a zbog bolesti sam krenula u školu nešto kasnije. Nisam osjećala jake bolove pa mi je, umjesto
-                     lijekova, preporučena terapija plivanja u moru. Bolest mi je poslužila kao motivacija da se počnem
-                     baviti
-                     sportom, čiji je učinak na moje zdravlje bio toliko dobar da se u osamnaestoj godini povukla - govori
-                     Kristina, bivša odbojkašica i nogometašica, koja sada trenira tajlandski boks, a već četiri godine i
-                     ronjenje.
-                  </p>
-                  <p>
-                     Tu joj je ljubav usadio instruktor Damir Zurub, koji ju je u klub Roniti se mora pozvao u sklopu
-                     projekta
-                     Plavo ronilačko srce. Kristina do danas ima 89 zarona i cilj joj je postati instruktorica ronjenja, a
-                     vrlo je uspješan model za podvodnu fotografiju.
-                  </p>
-   
-                  </p>
-   
-                  <figure>
-                     <img src="img/single-news-article/single-img-02.jpg" alt="">
-                     <div>
-                        <i class="fas fa-camera"></i>
-                        <span>Damir Zurub / Hanza Media</span>
-                     </div>
-                     <p>
-                        Rezultate prestižne nagrade 23. srpnja će Kristina dočekati na ljetovanju, uz svog dečka Luku.
-                     </p>
-                  </figure>
-   
-                  <blockquote>
-                     KAD ZARONIMO, NE IZLAZIMO IZ MORA SVE DOK NE NAPRAVIMO DOBRU FOTOGRAFIJU ILI NE POTROŠIMO ZRAK U BOCI,
-                     OTPRILIKE 45 MINUTA, A ZNAMO ZA TO ODRADITI VIŠE OD JEDNOG ZARONA.
-                  </blockquote>
 
-                  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/CC7vKEhlhEQ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/CC7vKEhlhEQ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/CC7vKEhlhEQ/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Glass Beach is a beach in MacKerricher State Park 😍 Near Fort Bragg, California that is abundant in sea glass created from years of dumping garbage into an area of coastline near the northern part of the town. Photos by : 1. @neohumanity 2. @floris_van_breugel 3, 4, 5. @turgut.aliev #nature</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/nature/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Nature</a> (@nature) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2020-07-22T05:55:31+00:00">Jul 21, 2020 at 10:55pm PDT</time></p></div></blockquote> 
-   
-                  <p>
-                     Na natjecanjima, gdje su me fotografirali moj instruktor, ali i Ivana Nobilo te Srđan Vrančić,
-                     osvajala
-                     sam prva, druga i treća mjesta - ističe Kristina koja je ronila i na Pelješcu, u sklopu akcije
-                     #ThinkGreen, te s četrdesetak ronioca izvadila čak pet tona smeća. Ova buduća marketinška
-                     stručnjakinja,
-                     čiji je najveći san osnovati veliku i sretnu obitelj, rezultate nagrade će 23. srpnja, dokad traje
-                     glasanje, dočekati s dečkom Lukom, studentom strojarstva. I to u Svetom Filipu i Jakovu, gdje ljetuju
-                     već
-                     četiri godine.
-                  </p>
-               </div><!-- single article content end -->
+                        <figure>
+                           <img src="img/single-news-article/single-img-01.jpg" alt="">
+                           <div>
+                              <i class="fas fa-camera"></i>
+                              <span>Ivana Nobilo / Hanza Media</span>
+                           </div>
+                           <p>
+                              Svestrana Kristina Ivanuš Kika školuje se i za voditeljicu ronjenja u sklopu projekta
+                              plavo
+                              ronilačko
+                              srce RK 'Roniti se mora'.
+                           </p>
+                        </figure>
 
-               <!-- single article ad start  -->
-               <div class="single-article-content-ad">
-                  <a href="#">
-                     <img src="img/ad/ad-instance.jpg" alt="">
-                  </a>
-               </div><!-- single article ad end  -->
-            </div><!-- single article main end -->
+                        <blockquote>
+                           BOLEST MI JE POSLUŽILA KAO MOTIVACIJA DA SE POČNEM BAVITI SPORTOM.
+                        </blockquote>
 
-            <!-- read also start -->
-            <div class="single-article-read-also">
-               <h5 class="single-article-read-also-title">Čitajte i:</h5>
-               <ul class="single-article-read-also-links">
-                  <li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/BHACKCNDMW8" frameborder="0"
+                           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                           allowfullscreen></iframe>
+
+                        <p>
+                           - Padala sam jer do mozga mi ne bi došla informacija da treba zakoračiti, borila sam se s
+                           trncima u
+                           tijelu, a zbog bolesti sam krenula u školu nešto kasnije. Nisam osjećala jake bolove pa mi
+                           je,
+                           umjesto
+                           lijekova, preporučena terapija plivanja u moru. Bolest mi je poslužila kao motivacija da se
+                           počnem
+                           baviti
+                           sportom, čiji je učinak na moje zdravlje bio toliko dobar da se u osamnaestoj godini povukla
+                           -
+                           govori
+                           Kristina, bivša odbojkašica i nogometašica, koja sada trenira tajlandski boks, a već četiri
+                           godine i
+                           ronjenje.
+                        </p>
+                        <p>
+                           Tu joj je ljubav usadio instruktor Damir Zurub, koji ju je u klub Roniti se mora pozvao u
+                           sklopu
+                           projekta
+                           Plavo ronilačko srce. Kristina do danas ima 89 zarona i cilj joj je postati instruktorica
+                           ronjenja, a
+                           vrlo je uspješan model za podvodnu fotografiju.
+                        </p>
+
+                        </p>
+
+                        <figure>
+                           <img src="img/single-news-article/single-img-02.jpg" alt="">
+                           <div>
+                              <i class="fas fa-camera"></i>
+                              <span>Damir Zurub / Hanza Media</span>
+                           </div>
+                           <p>
+                              Rezultate prestižne nagrade 23. srpnja će Kristina dočekati na ljetovanju, uz svog dečka
+                              Luku.
+                           </p>
+                        </figure>
+
+                        <blockquote>
+                           KAD ZARONIMO, NE IZLAZIMO IZ MORA SVE DOK NE NAPRAVIMO DOBRU FOTOGRAFIJU ILI NE POTROŠIMO
+                           ZRAK U
+                           BOCI,
+                           OTPRILIKE 45 MINUTA, A ZNAMO ZA TO ODRADITI VIŠE OD JEDNOG ZARONA.
+                        </blockquote>
+
+                        <blockquote class="instagram-media" data-instgrm-captioned
+                           data-instgrm-permalink="https://www.instagram.com/p/CC7vKEhlhEQ/?utm_source=ig_embed&amp;utm_campaign=loading"
+                           data-instgrm-version="12"
+                           style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                           <div style="padding:16px;"> <a
+                                 href="https://www.instagram.com/p/CC7vKEhlhEQ/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                 style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                                 target="_blank">
+                                 <div style=" display: flex; flex-direction: row; align-items: center;">
+                                    <div
+                                       style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                                    </div>
+                                    <div
+                                       style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                                       <div
+                                          style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                                       </div>
+                                       <div
+                                          style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div style="padding: 19% 0;"></div>
+                                 <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg
+                                       width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                       xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
+                                       <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                          <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                             <g>
+                                                <path
+                                                   d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                                </path>
+                                             </g>
+                                          </g>
+                                       </g>
+                                    </svg></div>
+                                 <div style="padding-top: 8px;">
+                                    <div
+                                       style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                                       View this post on Instagram</div>
+                                 </div>
+                                 <div style="padding: 12.5% 0;"></div>
+                                 <div
+                                    style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                                    <div>
+                                       <div
+                                          style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                                       </div>
+                                       <div
+                                          style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                                       </div>
+                                       <div
+                                          style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                                       </div>
+                                    </div>
+                                    <div style="margin-left: 8px;">
+                                       <div
+                                          style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                                       </div>
+                                       <div
+                                          style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                                       </div>
+                                    </div>
+                                    <div style="margin-left: auto;">
+                                       <div
+                                          style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                                       </div>
+                                       <div
+                                          style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                                       </div>
+                                       <div
+                                          style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </a>
+                              <p style=" margin:8px 0 0 0; padding:0 4px;"> <a
+                                    href="https://www.instagram.com/p/CC7vKEhlhEQ/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;"
+                                    target="_blank">Glass Beach is a beach in MacKerricher State Park 😍 Near Fort
+                                    Bragg,
+                                    California that is abundant in sea glass created from years of dumping garbage into
+                                    an
+                                    area of coastline near the northern part of the town. Photos by : 1. @neohumanity 2.
+                                    @floris_van_breugel 3, 4, 5. @turgut.aliev #nature</a></p>
+                              <p
+                                 style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                                 A post shared by <a
+                                    href="https://www.instagram.com/nature/?utm_source=ig_embed&amp;utm_campaign=loading"
+                                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;"
+                                    target="_blank"> Nature</a> (@nature) on <time
+                                    style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;"
+                                    datetime="2020-07-22T05:55:31+00:00">Jul 21, 2020 at 10:55pm PDT</time></p>
+                           </div>
+                        </blockquote>
+
+                        <p>
+                           Na natjecanjima, gdje su me fotografirali moj instruktor, ali i Ivana Nobilo te Srđan
+                           Vrančić,
+                           osvajala
+                           sam prva, druga i treća mjesta - ističe Kristina koja je ronila i na Pelješcu, u sklopu
+                           akcije
+                           #ThinkGreen, te s četrdesetak ronioca izvadila čak pet tona smeća. Ova buduća marketinška
+                           stručnjakinja,
+                           čiji je najveći san osnovati veliku i sretnu obitelj, rezultate nagrade će 23. srpnja, dokad
+                           traje
+                           glasanje, dočekati s dečkom Lukom, studentom strojarstva. I to u Svetom Filipu i Jakovu, gdje
+                           ljetuju
+                           već
+                           četiri godine.
+                        </p>
+                     </div><!-- single article content end -->
+
+                  </div><!-- single article main end -->
+
+                  <!-- read also start -->
+                  <div class="single-article-read-also">
+                     <h5 class="single-article-read-also-title">Čitajte i:</h5>
+                     <ul class="single-article-read-also-links">
+                        <li>
+                           <a href="#">
+                              Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
+                              vrtoglavice'
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
+                              vrtoglavice'
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
+                              vrtoglavice'
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
+                              vrtoglavice'
+                           </a>
+                        </li>
+                     </ul>
+                  </div><!-- read also end -->
+
+                  <!-- single article tags start -->
+                  <div class="single-article-tags">
+                     <h5 class="single-article-tags-title">Tagovi:</h5>
+                     <ul class="single-article-tags-items">
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                        <li><a href="#">#ThinkGreen</a></li>
+                     </ul>
+                  </div><!-- single article tags end -->
+
+                  <!-- single article social nav start -->
+                  <nav class="single-article-social-nav">
+                     <ul>
+                        <li><a class="fab fa-facebook-f" href="#"></a></li>
+                        <li><a class="fab fa-twitter" href="#"></a></li>
+                        <li><a class="fab fa-pinterest-p" href="#"></a></li>
+                        <li><a class="fab fa-whatsapp" href="#"></a></li>
+                        <li><a class="fab fa-viber" href="#"></a></li>
+                        <li><a class="far fa-envelope" href="#"></a></li>
+                     </ul>
+                  </nav><!-- single article social nav end -->
+
+                  <!-- single article ad start -->
+                  <div class="single-article-ad">
                      <a href="#">
-                        Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
-                        vrtoglavice'
+                        <img src="img/single-news-article/single-ad.png" alt="">
                      </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
-                        vrtoglavice'
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
-                        vrtoglavice'
-                     </a>
-                  </li>
-                  <li>
-                     <a href="#">
-                        Bolesti unatoč, prehodala je Camino: 'Bila sam oličenje zdravlja, a onda su počele čudne
-                        vrtoglavice'
-                     </a>
-                  </li>
-               </ul>
-            </div><!-- read also end -->
+                  </div><!-- single article ad end -->
+               </div>
+               <div class="single-article-main-sidebar-right"></div>
 
-            <!-- single article tags start -->
-            <div class="single-article-tags">
-               <h5 class="single-article-tags-title">Tagovi:</h5>
-               <ul class="single-article-tags-items">
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-                  <li><a href="#">#ThinkGreen</a></li>
-               </ul>
-            </div><!-- single article tags end -->
+            </div>
 
-            <!-- single article social nav start -->
-            <nav class="single-article-social-nav">
-               <ul>
-                  <li><a class="fab fa-facebook-f" href="#"></a></li>
-                  <li><a class="fab fa-twitter" href="#"></a></li>
-                  <li><a class="fab fa-pinterest-p" href="#"></a></li>
-                  <li><a class="fab fa-whatsapp" href="#"></a></li>
-                  <li><a class="fab fa-viber" href="#"></a></li>
-                  <li><a class="far fa-envelope" href="#"></a></li>
-               </ul>
-            </nav><!-- single article social nav end -->
-
-            <!-- single article ad start -->
-            <div class="single-article-ad">
-               <a href="#">
-                  <img src="img/single-news-article/single-ad.png" alt="">
-               </a>
-            </div><!-- single article ad end -->
 
             <!-- single article more start -->
             <div class="single-article-more home-main">
@@ -481,14 +615,14 @@
                   </nav>
                </div>
 
-               <!-- top footer left navigation -->
+               <!-- top footer left navigation start -->
                <nav class="top-footer-left-nav">
-                  <ul>
+                  <ul class="footer-nav-menu">
                      <li>
                         <a href="#">
                            fokus
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">priče</a></li>
                            <li><a href="">dogadjanja</a></li>
                            <li><a href="">zvezdane staza</a></li>
@@ -499,7 +633,7 @@
                         <a href="#">
                            moda
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">novosti</a></li>
                            <li><a href="">trendovi</a></li>
                            <li><a href="">inspiracija</a></li>
@@ -509,7 +643,7 @@
                         <a href="#">
                            lepota
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">novosti</a></li>
                            <li><a href="">lice</a></li>
                            <li><a href="">telo</a></li>
@@ -522,7 +656,7 @@
                         <a href="#">
                            život
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">preporuke</a></li>
                            <li><a href="">kultura</a></li>
                            <li><a href="">dizajn &amp; kultura</a></li>
@@ -537,7 +671,7 @@
                         <a href="#">
                            video
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">zvezdane staze</a></li>
                         </ul>
                      </li>
@@ -545,7 +679,7 @@
                         <a href="#">
                            appeal
                         </a>
-                        <ul>
+                        <ul class="footer-nav-sub-menu">
                            <li><a href="">expert</a></li>
                         </ul>
                      </li>
@@ -555,7 +689,7 @@
                         </a>
                      </li>
                   </ul>
-               </nav>
+               </nav><!-- top footer left navigation end -->
             </div>
 
             <!-- top footer newsletter -->
@@ -568,7 +702,7 @@
                   <form action="index.html" method="GET">
                      <div class="newsletter-form-input">
                         <input type="search" name="search" value="" placeholder="Upisite svoj e-mail">
-                        <a href="#" class="fas fa-long-arrow-alt-right"></a>
+                        <button type="submit" class="fas fa-long-arrow-alt-right"></button>
                      </div>
                   </form>
                </div>

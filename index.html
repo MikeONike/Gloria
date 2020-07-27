@@ -21,7 +21,7 @@
 	<title>Vodeci lifestyle portal - Gloria</title>
 
 	<!-- SASS file -->
-	<link rel="stylesheet" href="sass/theme.css">
+	<link rel="stylesheet" href="css/theme.css">
 
 </head>
 
@@ -31,12 +31,16 @@
 		<!-- <div class="overlay"></div> -->
 
 		<!-- header start -->
-		<header class="header home">
+		<header class="header">
 
 			<!-- top header start -->
 			<div class="top-header">
-				<a class="logo" href="index.html"></a>
-				<p class="category-title">fokus</p>
+				<a class="logo" href="index.html">
+					<img src="img/svg/logo/gloria-logo.svg" alt="">
+				</a>
+
+				<!-- Naslov kategorije. Prikazuje se samo na stranicama pojedinacne kategorije a na ostalim stranicama se ne prikazuje -->
+				<!-- <p class="category-title">fokus</p> -->
 			</div><!-- top header end -->
 
 			<!-- bottom header start -->
@@ -52,91 +56,92 @@
 				<!-- header link navigation -->
 				<div class="head-home">
 					<a href="index.html">
+						<img src="img/svg/logo/gloria-logo.svg" alt="">
 						<span class="head-home-text">početna</span>
 					</a>
 				</div>
 				<nav class="head-nav">
-					<ul>
-						<li>
-							<a href="#">
-								<span>fokus</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-							<ul>
-								<li><a href="">priče</a></li>
-								<li><a href="">dogadjanja</a></li>
-								<li><a href="">zvezdane staza</a></li>
-								<li><a href="">s kraljevskog dvora</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								<span>moda</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-							<ul>
-								<li><a href="">novosti</a></li>
-								<li><a href="">trendovi</a></li>
-								<li><a href="">inspiracija</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								<span>lepota</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-							<ul>
-								<li><a href="">novosti</a></li>
-								<li><a href="">lice</a></li>
-								<li><a href="">telo</a></li>
-								<li><a href="">kosa &amp; nokti</a></li>
-								<li><a href=""><span>BIPA</span> backstage</a></li>
-								<li><a href="">makeover</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								<span>život</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-							<ul>
-								<li><a href="">preporuke</a></li>
-								<li><a href="">kultura</a></li>
-								<li><a href="">dizajn &amp; kultura</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								<span>magazin</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span>video</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-							<ul>
-								<li><a href="">zvezdane staze</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								<span>appeal</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-							<ul>
-								<li><a href="">expert</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="#">
-								<span>živim</span>
-								<span class="fas fa-sort-down"></span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+               <ul class="head-nav-main-menu">
+                  <li class="active-cat">
+                     <a href="#">
+                        <span>fokus</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                     <ul class="head-nav-sub-menu">
+                        <li><a href="">priče</a></li>
+                        <li><a href="">dogadjanja</a></li>
+                        <li><a href="">zvezdane staza</a></li>
+                        <li><a href="">s kraljevskog dvora</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span>moda</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                     <ul class="head-nav-sub-menu">
+                        <li><a href="">novosti</a></li>
+                        <li><a href="">trendovi</a></li>
+                        <li><a href="">inspiracija</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span>lepota</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                     <ul class="head-nav-sub-menu">
+                        <li><a href="">novosti</a></li>
+                        <li><a href="">lice</a></li>
+                        <li><a href="">telo</a></li>
+                        <li><a href="">kosa &amp; nokti</a></li>
+                        <li><a href=""><span>BIPA</span> backstage</a></li>
+                        <li><a href="">makeover</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span>život</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                     <ul class="head-nav-sub-menu">
+                        <li><a href="">preporuke</a></li>
+                        <li><a href="">kultura</a></li>
+                        <li><a href="">dizajn &amp; kultura</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span>magazin</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span>video</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                     <ul class="head-nav-sub-menu">
+                        <li><a href="">zvezdane staze</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span>appeal</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                     <ul class="head-nav-sub-menu">
+                        <li><a href="">expert</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <span>živim</span>
+                        <span class="fas fa-sort-down"></span>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
 
 				<!-- header social navigation -->
 				<nav class="social-nav">
@@ -147,27 +152,29 @@
 				</nav>
 
 				<!-- header search bar -->
-				<div class="header-search">
-					<form action="index.html" method="GET">
-						<div class="header-search-input">
-							<input type="search" name="search" value="" placeholder="Pretraži Gloria.rs">
-							<a href="#" class="fas fa-search"></a>
-						</div>
-						<a href="#" class="fas fa-search"></a>
-					</form>
-				</div>
+            <div class="header-search">
+               <form action="index.html" method="GET">
+                  <div class="header-search-input">
+                     <input type="search" name="search" value="" placeholder="Pretraži Gloria.rs">
+                     <button type="submit" class="fas fa-search"></button>
+                  </div>
+                  <a href="#" class="fas fa-search"></a>
+               </form>
+            </div>
 
 			</div><!-- bottom header end -->
 
+			<!-- Sub-category meni koji se prikazuje samo na stranicama pojedinacnih katekorija i podkategorija, na ostalim stranicama se ne prikazuje -->
 			<!-- subcategory header start -->
-         <nav class="sub-category-header">
+         <!-- <nav class="sub-category-header">
             <ul>
                <li><a href="#">price</a></li>
                <li><a href="#">događanja</a></li>
                <li><a href="#">zvezdane staze</a></li>
                <li><a href="#">s skraljevskog dvora</a></li>
             </ul>
-         </nav><!-- subcategory header end -->
+			</nav> -->
+			<!-- subcategory header end -->
 		</header><!-- header end -->
 
 		<main>
@@ -184,12 +191,12 @@
 							<p class="article-category">
 								<a href="#/1">fokus</a>
 							</p>
-							<h1 class="article-title">
+							<h2 class="article-title">
 								<a href="#/2">
 									Što jedu balerine? Zvijezda HNK otkrila nam svoje navike i recept za najbolje ljetno
 									osvježenje
 								</a>
-							</h1>
+							</h2>
 							<div class="post-format">
 								<i class="far fa-newspaper"></i>
 							</div>
@@ -382,12 +389,12 @@
 							<p class="article-category">
 								<a href="#">lepota</a>
 							</p>
-							<h1 class="article-title">
+							<h2 class="article-title">
 								<a href="#">
 									Spasonosno rješenje za vruće dane! Bez maglica za hidrataciju lica i tijela više ne idem
 									nikamo
 								</a>
-							</h1>
+							</h2>
 						</div>
 					</article>
 				</div><!-- izdvajamo lead end -->
@@ -405,11 +412,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -423,11 +430,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -441,11 +448,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -473,11 +480,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -491,11 +498,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -509,11 +516,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -547,11 +554,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -565,11 +572,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -583,11 +590,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -601,11 +608,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -624,11 +631,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -644,11 +651,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -664,11 +671,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -685,12 +692,12 @@
 						<p class="article-category">
 							<a href="#">lepota</a>
 						</p>
-						<h1 class="article-title">
+						<h2 class="article-title">
 							<a href="#">
 								Spasonosno rješenje za vruće dane! Bez maglica za hidrataciju lica i tijela više ne idem
 								nikamo
 							</a>
-						</h1>
+						</h2>
 					</div>
 				</article>
 
@@ -707,11 +714,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -725,11 +732,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -766,11 +773,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -784,11 +791,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -802,11 +809,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -832,73 +839,73 @@
 				<div class="horoscope-articles">
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/ovan.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/bik.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/blizanci.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/rak.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/lav.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/devica.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/vaga.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/skorpion.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/strelac.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/jarac.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/vodolija.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
 					<article class="horoscope-article">
 						<a href="#">
-							<i class="horoscope-sign fas fa-american-sign-language-interpreting"></i>
+							<img src="img/horoskop/riba.svg" class="horoscope-sign">
 							<span class="horoscope-article-title">ovan</span>
 						</a>
 					</article>
@@ -930,11 +937,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -948,11 +955,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -966,11 +973,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -984,11 +991,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -1024,11 +1031,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -1042,11 +1049,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -1060,11 +1067,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -1078,11 +1085,11 @@
 								<p class="article-category">
 									<a href="#">telo</a>
 								</p>
-								<h1 class="article-title">
+								<h2 class="article-title">
 									<a href="#">
 										Sta uciniti kada izgorite na suncu, iako ste pazili na sve detalje.
 									</a>
-								</h1>
+								</h2>
 								<div class="post-format">
 									<i class="far fa-newspaper"></i>
 								</div>
@@ -1125,12 +1132,12 @@
 						<p class="article-category">
 							<a href="#">lepota</a>
 						</p>
-						<h1 class="article-title">
+						<h2 class="article-title">
 							<a href="#">
 								Spasonosno rješenje za vruće dane! Bez maglica za hidrataciju lica i tijela više ne idem
 								nikamo asda asdasd asdasd asdasd asdasd asdad asdasd asdadasd
 							</a>
-						</h1>
+						</h2>
 					</div>
 				</article>
 				<article class="home-article-black">
@@ -1141,12 +1148,12 @@
 						<p class="article-category">
 							<a href="#">lepota</a>
 						</p>
-						<h1 class="article-title">
+						<h2 class="article-title">
 							<a href="#">
 								Spasonosno rješenje za vruće dane! Bez maglica za hidrataciju lica i tijela više ne idem
 								nikamo
 							</a>
-						</h1>
+						</h2>
 					</div>
 				</article>
 				<article class="home-article-black">
@@ -1157,12 +1164,12 @@
 						<p class="article-category">
 							<a href="#">lepota</a>
 						</p>
-						<h1 class="article-title">
+						<h2 class="article-title">
 							<a href="#">
 								Spasonosno rješenje za vruće dane! Bez maglica za hidrataciju lica i tijela više ne idem
 								nikamo
 							</a>
-						</h1>
+						</h2>
 					</div>
 				</article>
 				<hr class="border">
@@ -1179,17 +1186,17 @@
 				<!-- edition articles start -->
 				<div class="editions-articles">
 					<article class="edition-article">
-						<a href="#" class="edition-img news-item-img size-3-4">
+						<a href="#" class="edition-img news-item-image size-3-4">
 							<img src="img/editions/edition-01.png" alt="">
 						</a>
 					</article>
 					<article class="edition-article">
-						<a href="#" class="edition-img news-item-img size-3-4">
+						<a href="#" class="edition-img news-item-image size-3-4">
 							<img src="img/editions/edition-01.png" alt="">
 						</a>
 					</article>
 					<article class="edition-article">
-						<a href="#" class="edition-img news-item-img size-3-4">
+						<a href="#" class="edition-img news-item-image size-3-4">
 							<img src="img/editions/edition-01.png" alt="">
 						</a>
 					</article>
@@ -1211,12 +1218,12 @@
 							<p class="article-category">
 								<a href="#/1">fokus</a>
 							</p>
-							<h1 class="article-title">
+							<h2 class="article-title">
 								<a href="#/2">
 									Što jedu balerine? Zvijezda HNK otkrila nam svoje navike i recept za najbolje ljetno
 									osvježenje
 								</a>
-							</h1>
+							</h2>
 							<div class="post-format">
 								<i class="far fa-newspaper"></i>
 							</div>
@@ -1255,81 +1262,81 @@
 						</nav>
 					</div>
 
-					<!-- top footer left navigation -->
-					<nav class="top-footer-left-nav">
-						<ul>
-							<li>
-								<a href="#">
-									fokus
-								</a>
-								<ul>
-									<li><a href="">priče</a></li>
-									<li><a href="">dogadjanja</a></li>
-									<li><a href="">zvezdane staza</a></li>
-									<li><a href="">s kraljevskog dvora</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									moda
-								</a>
-								<ul>
-									<li><a href="">novosti</a></li>
-									<li><a href="">trendovi</a></li>
-									<li><a href="">inspiracija</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									lepota
-								</a>
-								<ul>
-									<li><a href="">novosti</a></li>
-									<li><a href="">lice</a></li>
-									<li><a href="">telo</a></li>
-									<li><a href="">kosa &amp; nokti</a></li>
-									<li><a href=""><span>BIPA</span> backstage</a></li>
-									<li><a href="">makeover</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									život
-								</a>
-								<ul>
-									<li><a href="">preporuke</a></li>
-									<li><a href="">kultura</a></li>
-									<li><a href="">dizajn &amp; kultura</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									magazin
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									video
-								</a>
-								<ul>
-									<li><a href="">zvezdane staze</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									appeal
-								</a>
-								<ul>
-									<li><a href="">expert</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">
-									živim
-								</a>
-							</li>
-						</ul>
-					</nav>
+					<!-- top footer left navigation start -->
+               <nav class="top-footer-left-nav">
+                  <ul class="footer-nav-menu">
+                     <li>
+                        <a href="#">
+                           fokus
+                        </a>
+                        <ul class="footer-nav-sub-menu">
+                           <li><a href="">priče</a></li>
+                           <li><a href="">dogadjanja</a></li>
+                           <li><a href="">zvezdane staza</a></li>
+                           <li><a href="">s kraljevskog dvora</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">
+                           moda
+                        </a>
+                        <ul class="footer-nav-sub-menu">
+                           <li><a href="">novosti</a></li>
+                           <li><a href="">trendovi</a></li>
+                           <li><a href="">inspiracija</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">
+                           lepota
+                        </a>
+                        <ul class="footer-nav-sub-menu">
+                           <li><a href="">novosti</a></li>
+                           <li><a href="">lice</a></li>
+                           <li><a href="">telo</a></li>
+                           <li><a href="">kosa &amp; nokti</a></li>
+                           <li><a href=""><span>BIPA</span> backstage</a></li>
+                           <li><a href="">makeover</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">
+                           život
+                        </a>
+                        <ul class="footer-nav-sub-menu">
+                           <li><a href="">preporuke</a></li>
+                           <li><a href="">kultura</a></li>
+                           <li><a href="">dizajn &amp; kultura</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">
+                           magazin
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                           video
+                        </a>
+                        <ul class="footer-nav-sub-menu">
+                           <li><a href="">zvezdane staze</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">
+                           appeal
+                        </a>
+                        <ul class="footer-nav-sub-menu">
+                           <li><a href="">expert</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#">
+                           živim
+                        </a>
+                     </li>
+                  </ul>
+               </nav><!-- top footer left navigation end -->
 				</div>
 
 				<!-- top footer newsletter -->
@@ -1342,7 +1349,7 @@
 						<form action="index.html" method="GET">
 							<div class="newsletter-form-input">
 								<input type="search" name="search" value="" placeholder="Upisite svoj e-mail">
-								<a href="#" class="fas fa-long-arrow-alt-right"></a>
+								<button type="submit" class="fas fa-long-arrow-alt-right"></button>
 							</div>
 						</form>
 					</div>
