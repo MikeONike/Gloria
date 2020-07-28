@@ -454,25 +454,25 @@ $(window).on('load', function () {
    // set fixed width of sidebar to 300px not including padding
    //////////////////////////////////////////////////////////////
 
-   if ($('.sub-category-sidebar').length > 0) {
-      var subCatSidePaddingLeft = $('.sub-category-sidebar').css('padding-left')
-      var subCatSidePaddingRight = $('.sub-category-sidebar').css('padding-right')
+   // if ($('.sub-category-sidebar').length > 0) {
+   //    var subCatSidePaddingLeft = $('.sub-category-sidebar').css('padding-left')
+   //    var subCatSidePaddingRight = $('.sub-category-sidebar').css('padding-right')
 
-      subCatSidePaddingLeft = Number(subCatSidePaddingLeft.replace('px', ''));
-      subCatSidePaddingRight = Number(subCatSidePaddingRight.replace('px', ''));
+   //    subCatSidePaddingLeft = Number(subCatSidePaddingLeft.replace('px', ''));
+   //    subCatSidePaddingRight = Number(subCatSidePaddingRight.replace('px', ''));
 
-      $('.sub-category-sidebar').css('min-width', `${subCatSidePaddingLeft + subCatSidePaddingRight + 300}px`)
-   }
+   //    $('.sub-category-sidebar').css('min-width', `${subCatSidePaddingLeft + subCatSidePaddingRight + 300}px`)
+   // }
 
-   if ($('.single-article-main-sidebar-right').length > 0) {
-      var singleNewsSidePaddingRight = $('.single-article-main-sidebar-right').css('padding-right')
-      var singleNewsSidePaddingLeft = $('.single-article-main-sidebar-right').css('padding-left')
+   // if ($('.single-article-main-sidebar-right').length > 0) {
+   //    var singleNewsSidePaddingRight = $('.single-article-main-sidebar-right').css('padding-right')
+   //    var singleNewsSidePaddingLeft = $('.single-article-main-sidebar-right').css('padding-left')
    
-      singleNewsSidePaddingRight = Number(singleNewsSidePaddingRight.replace('px', ''));
-      singleNewsSidePaddingLeft = Number(singleNewsSidePaddingLeft.replace('px', ''));
+   //    singleNewsSidePaddingRight = Number(singleNewsSidePaddingRight.replace('px', ''));
+   //    singleNewsSidePaddingLeft = Number(singleNewsSidePaddingLeft.replace('px', ''));
    
-      $('.single-article-main-sidebar-right').css('min-width', `${singleNewsSidePaddingRight + singleNewsSidePaddingLeft + 300}px`)
-   }
+   //    $('.single-article-main-sidebar-right').css('min-width', `${singleNewsSidePaddingRight + singleNewsSidePaddingLeft + 300}px`)
+   // }
 
 
 });

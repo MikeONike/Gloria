@@ -163,6 +163,34 @@ strong {
   color: #ff3948 !important;
 }
 
+.post-format {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-clip-path: polygon(0 50%, 50% 100%, 100% 50%, 50% 0);
+          clip-path: polygon(0 50%, 50% 100%, 100% 50%, 50% 0);
+}
+
+.post-format i {
+  font-size: 1.8rem;
+}
+
 .news-item-image {
   position: relative;
   background: rgba(238, 238, 238, 0.5);
@@ -561,9 +589,9 @@ strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
   z-index: 21;
@@ -1812,36 +1840,36 @@ strong {
   }
 }
 
-.horoscope .horoscope-title {
+.horoscope-title {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 
-.horoscope .horoscope-articles {
+.horoscope-articles {
   margin: 0 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
 }
 
-.horoscope .horoscope-articles .horoscope-article {
+.horoscope-articles .horoscope-article {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 25%;
           flex: 0 0 25%;
   width: 25%;
   margin-bottom: 3rem;
-  border-right: 1px solid #cccccc;
 }
 
-.horoscope .horoscope-articles .horoscope-article a {
+.horoscope-articles .horoscope-article a {
+  border-right: 1px solid #cccccc;
   height: 100%;
   padding: 3rem 1rem;
   display: -webkit-box;
@@ -1861,14 +1889,14 @@ strong {
   transition: 0.3s ease;
 }
 
-.horoscope .horoscope-articles .horoscope-article .horoscope-sign {
+.horoscope-articles .horoscope-article .horoscope-sign {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   max-width: 60px;
   margin-bottom: 2rem;
 }
 
-.horoscope .horoscope-articles .horoscope-article .horoscope-article-title {
+.horoscope-articles .horoscope-article .horoscope-article-title {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-family: 'ArialMT';
@@ -1879,32 +1907,32 @@ strong {
   text-transform: capitalize;
 }
 
-.horoscope .horoscope-articles .horoscope-article:hover {
+.horoscope-articles .horoscope-article:hover {
   background-color: #ff3948;
 }
 
-.horoscope .horoscope-articles .horoscope-article:hover .horoscope-sign {
+.horoscope-articles .horoscope-article:hover .horoscope-sign {
   -webkit-filter: invert(100%) grayscale(100%) contrast(200%) brightness(150%);
           filter: invert(100%) grayscale(100%) contrast(200%) brightness(150%);
 }
 
-.horoscope .horoscope-articles .horoscope-article:hover .horoscope-article-title {
+.horoscope-articles .horoscope-article:hover .horoscope-article-title {
   color: #fff;
 }
 
-.horoscope .horoscope-articles .horoscope-article:last-of-type {
+.horoscope-articles .horoscope-article:last-of-type a {
   border-right: none;
 }
 
 @media (min-width: 768px) {
-  .horoscope .border {
+  .border {
     max-width: 95% !important;
   }
-  .horoscope .horoscope-articles {
+  .horoscope-articles {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .horoscope .horoscope-articles .horoscope-article {
+  .horoscope-articles .horoscope-article {
     margin-bottom: 1rem;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 8.33%;
@@ -2274,25 +2302,27 @@ strong {
   }
 }
 
-.sub-category .sub-category-content {
+.page-sidebar {
   border-bottom: 3px solid #333;
   margin-bottom: 3rem;
 }
 
-.sub-category .sub-category-sidebar {
-  visibility: hidden;
-  width: 300px;
-  padding: 0;
+.sidebar {
+  display: none;
 }
 
-.sub-category .sub-category-articles .home-main-articles-section {
+.sub-category-articles {
+  margin: 0 5%;
+}
+
+.sub-category-articles .home-main-articles-section {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
 }
 
-.sub-category .sub-category-articles .home-main-articles-section .home-article {
+.sub-category-articles .home-main-articles-section .home-article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2307,7 +2337,7 @@ strong {
   position: relative;
 }
 
-.sub-category .sub-category-articles .home-main-articles-section .home-article .article-img {
+.sub-category-articles .home-main-articles-section .home-article .article-img {
   width: 100%;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 30%;
@@ -2315,7 +2345,7 @@ strong {
   width: 30%;
 }
 
-.sub-category .sub-category-articles .home-main-articles-section .home-article .article-content {
+.sub-category-articles .home-main-articles-section .home-article .article-content {
   padding: 0;
   position: absolute;
   top: 50%;
@@ -2325,7 +2355,7 @@ strong {
   height: 100%;
 }
 
-.sub-category .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
+.sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
   text-align: left;
   font-size: 1.8rem;
   line-height: 2.4rem;
@@ -2333,7 +2363,7 @@ strong {
   font-family: 'FreightDispProBold-Regular';
 }
 
-.sub-category .sub-category-articles .home-main-articles-section .home-article .article-content-text {
+.sub-category-articles .home-main-articles-section .home-article .article-content-text {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2355,12 +2385,15 @@ strong {
           justify-content: flex-start;
 }
 
-.sub-category .sub-category-articles .home-main-articles-section .home-article .post-format {
-  bottom: 0;
-  left: 0;
+.sub-category-articles .home-main-articles-section .home-article .post-format {
+  position: absolute;
+  top: 100%;
+  left: calc(15%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.sub-category .sub-category-nav {
+.pagination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2373,15 +2406,15 @@ strong {
   margin-bottom: 3rem;
 }
 
-.sub-category .sub-category-nav > a {
+.pagination > a {
   color: #ff3948;
 }
 
-.sub-category .sub-category-nav > a:first-of-type {
+.pagination > a:first-of-type {
   margin-right: 3rem;
 }
 
-.sub-category .sub-category-nav ul {
+.pagination ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2394,7 +2427,7 @@ strong {
   margin-right: 3rem;
 }
 
-.sub-category .sub-category-nav ul li {
+.pagination ul li {
   margin-right: 1.5rem;
   font-family: 'Lato', sans-serif;
   font-size: 2.4rem;
@@ -2402,32 +2435,32 @@ strong {
   letter-spacing: 2.4px;
 }
 
-.sub-category .sub-category-nav ul li:last-of-type {
+.pagination ul li:last-of-type {
   margin-right: 0;
 }
 
-.sub-category .sub-category-nav ul li a {
+.pagination ul li a {
   color: #333;
 }
 
-.sub-category .sub-category-nav ul li:first-of-type a {
+.pagination ul li:first-of-type a {
   color: #cccccc;
 }
 
 @media (min-width: 360px) {
-  .sub-category .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
     max-height: calc(3rem + (5 * 1.6rem));
   }
-  .sub-category .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
     font-family: 'FreightDispProBold-Regular';
   }
 }
 
 @media (min-width: 741px) {
-  .sub-category .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
     max-height: calc(3rem + (5 * 2.4rem));
   }
-  .sub-category .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
     font-size: 1.8rem;
     line-height: 2.4rem;
     letter-spacing: normal;
@@ -2436,10 +2469,10 @@ strong {
 }
 
 @media (min-width: 768px) {
-  .sub-category .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
     max-height: calc(3rem + (5 * 3rem));
   }
-  .sub-category .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
     font-size: 2.4rem;
     line-height: 3rem;
     letter-spacing: normal;
@@ -2448,7 +2481,7 @@ strong {
 }
 
 @media (min-width: 992px) {
-  .sub-category .sub-category-content {
+  .page-sidebar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2459,12 +2492,14 @@ strong {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .sub-category .sub-category-sidebar {
-    width: auto;
+  .sidebar {
+    width: calc(2 * 20px + 300px);
+    height: auto;
     padding: 2rem;
     margin-left: 1rem;
+    display: block;
   }
-  .sub-category .sub-category-articles {
+  .main-content {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -2475,6 +2510,10 @@ strong {
 
 .single-article {
   padding: 0 1rem;
+}
+
+.single-article .page-sidebar {
+  border: none;
 }
 
 .single-article .single-article-header {
@@ -2790,6 +2829,12 @@ strong {
   margin-bottom: 2.5rem !important;
 }
 
+.single-article .single-article-articles .home-main-articles .home-main-articles-section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .single-article .single-article-more .single-article-more-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2801,8 +2846,6 @@ strong {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
-  margin-right: 10%;
-  margin-left: 10%;
 }
 
 .single-article .single-article-more .single-article-more-title p {
@@ -2819,14 +2862,29 @@ strong {
   height: 30px;
 }
 
-.single-article .single-article-more .home-main-articles .home-main-articles-section {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+.single-article .single-article-more .single-article-more-banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.single-article .single-article-more .single-article-more-banners > div {
+  margin-right: 2%;
+}
+
+.single-article .single-article-more .single-article-more-banners > div:last-of-type {
+  margin-right: 0;
 }
 
 @media (min-width: 600px) {
-  .single-article > *:not(.single-article-more) {
+  .single-article > *:not(.single-article-articles) {
     margin: 0 10%;
   }
 }
@@ -2870,17 +2928,6 @@ strong {
     line-height: 3.5rem;
     letter-spacing: normal;
     max-width: 66%;
-  }
-  .single-article .single-article-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
   }
   .single-article .single-article-main .single-article-content {
     -webkit-box-flex: 1;
@@ -2984,6 +3031,139 @@ strong {
 @media (min-width: 960px) {
   .terms-of-use > * {
     padding-left: 20%;
+  }
+}
+
+.horoscope .horoscope-articles {
+  border-bottom: 3px solid #333;
+  margin-bottom: 3rem;
+}
+
+.horoscope .horoscope-articles .horoscope-article {
+  margin-bottom: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.horoscope .active {
+  background-color: #ff3948;
+}
+
+.horoscope .active .horoscope-sign {
+  -webkit-filter: invert(100%) grayscale(100%) contrast(200%) brightness(150%);
+          filter: invert(100%) grayscale(100%) contrast(200%) brightness(150%);
+}
+
+.horoscope .active .horoscope-article-title {
+  color: #fff;
+}
+
+.horoscope .horoscope-content {
+  margin: 0 5%;
+}
+
+.horoscope .horoscope-content .horoscope-content-header {
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+  margin-bottom: 1.8rem;
+}
+
+.horoscope .horoscope-content .horoscope-content-header .horoscope-sub-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: normal;
+  margin-bottom: 5px;
+}
+
+.horoscope .horoscope-content .horoscope-content-header .horoscope-title {
+  font-family: 'FreightDispProBold-Regular';
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+  letter-spacing: normal;
+}
+
+.horoscope .horoscope-content .horoscope-content-header .horoscope-date {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: normal;
+  color: #999;
+}
+
+.horoscope .horoscope-content .horoscope-content-header .horoscope-stars {
+  margin-bottom: 2.5rem;
+}
+
+.horoscope .horoscope-content .horoscope-content-header .horoscope-stars .star4 {
+  width: 195px;
+  height: 31px;
+  background-image: url("../img/horoskop/stars.png");
+  background-position: 0 -31px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.horoscope .horoscope-content .horoscope-content-header .horoscope-logo {
+  display: none;
+}
+
+.horoscope .horoscope-content .horoscope-content-content p {
+  font-family: 'FreightTextProBook-Regular';
+  font-size: 1.8rem;
+  line-height: 3rem;
+  letter-spacing: normal;
+  margin-bottom: 1.8rem;
+}
+
+.horoscope .horoscope-content .horoscope-content-content h4 {
+  font-family: 'FreightDispProBold-Regular';
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: normal;
+  margin-bottom: 2.4rem;
+}
+
+@media (min-width: 600px) {
+  .horoscope .horoscope-content {
+    margin: 0 10%;
+  }
+  .horoscope .horoscope-content .horoscope-content-header {
+    position: relative;
+  }
+  .horoscope .horoscope-content .horoscope-content-header .horoscope-logo {
+    display: block;
+    width: 81px;
+    height: 72px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    -webkit-transform: translate(-100%, -50%);
+            transform: translate(-100%, -50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .horoscope .horoscope-articles {
+    border-bottom: none;
+  }
+  .horoscope .horoscope-articles .horoscope-article {
+    border-bottom: 3px solid #333;
+    margin-bottom: 0;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .horoscope .active {
+    border-bottom: 3px solid #ff3948 !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .horoscope .horoscope-content .horoscope-content-content {
+    max-width: 50%;
   }
 }
 /*# sourceMappingURL=theme.css.map */

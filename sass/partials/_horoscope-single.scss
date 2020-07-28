@@ -1,0 +1,143 @@
+.horoscope {
+   .horoscope-articles {
+      border-bottom: 3px solid $main-text;
+      margin-bottom: 3rem;
+
+      .horoscope-article {
+         margin-bottom: 0;
+         transition: 0.3s ease;
+      }
+   }
+
+   .active {
+      background-color: $link-hover;
+
+      .horoscope-sign {
+         filter: invert(100%) grayscale(100%) contrast(200%) brightness(150%);
+      }
+
+      .horoscope-article-title {
+         color: $blank;
+      }
+   }
+
+   .horoscope-content {
+      margin: 0 5%;
+
+      .horoscope-content-header {
+         text-align: center;
+         border-bottom: 1px solid $horoscope-border;
+         margin-bottom: 1.8rem;
+
+         .horoscope-sub-title {
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            @include text-format(1.8rem, 3rem);
+            margin-bottom: 5px;
+         }
+
+         .horoscope-title {
+            font-family: 'FreightDispProBold-Regular';
+            @include text-format(4.8rem, 4.8rem);
+         }
+
+         .horoscope-date {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            @include text-format(1.8rem, 3rem);
+            color: $sublink-color;
+         }
+
+         .horoscope-stars {
+            margin-bottom: 2.5rem;
+
+            %star {
+               width: 195px;
+               height: 31px;
+               background-image: url('../img/horoskop/stars.png');
+               background-position: 0 -31px;
+               background-repeat: no-repeat;
+               background-size: cover;
+               margin: 0 auto;
+            }
+
+            .star4 {
+               @extend %star;
+            }
+         }
+
+         .horoscope-logo {
+            display: none;
+         }
+      }
+
+      .horoscope-content-content {
+         p {
+            font-family: 'FreightTextProBook-Regular';
+            @include text-format(1.8rem, 3rem);
+            margin-bottom: 1.8rem;
+         }
+
+         h4 {
+            font-family: 'FreightDispProBold-Regular';
+            @include text-format(2.4rem, 3rem);
+            margin-bottom: 2.4rem;
+         }
+      }
+   }
+}
+
+@media (min-width:600px) {
+   .horoscope {
+      .horoscope-content {
+         margin: 0 10%;
+
+         .horoscope-content-header {
+            position: relative;
+
+            .horoscope-logo {
+               display: block;
+               width: 81px;
+               height: 72px;
+               position: absolute;
+               left: 0;
+               top: 100%;
+               transform: translate(-100%, -50%);
+            }
+         }
+      }
+   }
+
+
+}
+
+@media (min-width:768px) {
+   .horoscope {
+      .horoscope-articles {
+         border-bottom: none;
+
+         .horoscope-article {
+            border-bottom: 3px solid $main-text;
+            margin-bottom: 0;
+            transition: 0.3s ease;
+         }
+      }
+
+      .active {
+         border-bottom: 3px solid $link-hover !important;
+      }
+   }
+
+}
+
+@media (min-width:960px) {
+   .horoscope {
+
+      .horoscope-content {
+
+         .horoscope-content-content {
+            max-width: 50%;
+         }
+      }
+   }
+}
