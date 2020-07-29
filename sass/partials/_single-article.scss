@@ -1,6 +1,12 @@
 .single-article {
    padding: 0 1rem;
 
+   .home-main-articles {
+      .home-main-articles-section {
+         justify-content: flex-start;
+      }
+   }
+
    .page-sidebar {
       border: none;
    }

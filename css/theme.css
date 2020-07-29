@@ -2330,6 +2330,12 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-flex: 100%;
       -ms-flex: 100%;
           flex: 100%;
@@ -2347,11 +2353,10 @@ strong {
 
 .sub-category-articles .home-main-articles-section .home-article .article-content {
   padding: 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: calc(30% + 2rem);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+  width: 70%;
   height: 100%;
 }
 
@@ -2363,26 +2368,16 @@ strong {
   font-family: 'FreightDispProBold-Regular';
 }
 
+.sub-category-articles .home-main-articles-section .home-article .article-content .article-title a {
+  display: block;
+  max-height: calc(3 * 2.4rem);
+}
+
 .sub-category-articles .home-main-articles-section .home-article .article-content-text {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  margin-left: 1rem;
+  text-align: left;
   overflow: hidden;
-  max-height: calc(3rem + (3 * 2.4rem));
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .sub-category-articles .home-main-articles-section .home-article .post-format {
@@ -2406,14 +2401,6 @@ strong {
   margin-bottom: 3rem;
 }
 
-.pagination > a {
-  color: #ff3948;
-}
-
-.pagination > a:first-of-type {
-  margin-right: 3rem;
-}
-
 .pagination ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2424,7 +2411,10 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 3rem;
+}
+
+.pagination ul .active a {
+  color: #b3b3b3;
 }
 
 .pagination ul li {
@@ -2447,9 +2437,19 @@ strong {
   color: #cccccc;
 }
 
+.pagination ul li:first-of-type a {
+  margin-right: 2rem;
+  color: #ff3948;
+}
+
+.pagination ul li:last-of-type a {
+  margin-left: 2rem;
+  color: #ff3948;
+}
+
 @media (min-width: 360px) {
   .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
-    max-height: calc(3rem + (5 * 1.6rem));
+    margin-left: 2rem;
   }
   .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
     font-family: 'FreightDispProBold-Regular';
@@ -2457,26 +2457,26 @@ strong {
 }
 
 @media (min-width: 741px) {
-  .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
-    max-height: calc(3rem + (5 * 2.4rem));
-  }
   .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
     font-size: 1.8rem;
     line-height: 2.4rem;
     letter-spacing: normal;
     font-family: 'FreightDispProBold-Regular';
   }
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-title a {
+    max-height: calc(4 * 2.4rem);
+  }
 }
 
 @media (min-width: 768px) {
-  .sub-category-articles .home-main-articles-section .home-article .article-content .article-content-text {
-    max-height: calc(3rem + (5 * 3rem));
-  }
   .sub-category-articles .home-main-articles-section .home-article .article-content .article-title {
     font-size: 2.4rem;
     line-height: 3rem;
     letter-spacing: normal;
     font-family: 'FreightDispProBold-Regular';
+  }
+  .sub-category-articles .home-main-articles-section .home-article .article-content .article-title a {
+    max-height: calc(5 * 3rem);
   }
 }
 
@@ -2510,6 +2510,12 @@ strong {
 
 .single-article {
   padding: 0 1rem;
+}
+
+.single-article .home-main-articles .home-main-articles-section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .single-article .page-sidebar {

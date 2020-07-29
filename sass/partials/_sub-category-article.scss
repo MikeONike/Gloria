@@ -17,6 +17,8 @@
       .home-article {
          display: flex;
          flex-flow: row nowrap;
+         align-items: center;
+         justify-content: space-between;
          flex: 100%;
          width: 100%;
          position: relative;
@@ -30,31 +32,39 @@
 
          .article-content {
             padding: 0;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: calc(30% + 2rem);
+            flex: 0 0 70%;
+            width:70%;
+            // position: absolute;
+            // top: 50%;
+            // transform: translateY(-50%);
+            // left: calc(30% + 2rem);
             height: 100%;
-
+            
             .article-title {
                text-align: left;
                @include text-format(1.8rem, 2.4rem);
                font-family: 'FreightDispProBold-Regular';
+               a {
+                  display: block;
+                  max-height: calc(3 * 2.4rem);
+               }
             }
          }
-
+         
          .article-content-text {
             position: relative;
-            top: 50%;
-            transform: translateY(-50%);
+            margin-left: 1rem;
+            text-align: left;
             overflow: hidden;
-            // height: 120%;
+            // top: 50%;
+            // transform: translateY(-50%);
+            // overflow: hidden;
 
-            max-height: calc(3rem + (3 * 2.4rem));
-            display: flex;
-            flex-flow: column nowrap;
-            align-items: flex-start;
-            justify-content: flex-start;
+            // max-height: calc(3rem + (3 * 2.4rem));
+            // display: flex;
+            // flex-flow: column nowrap;
+            // align-items: flex-start;
+            // justify-content: flex-start;
          }
 
          .post-format {
@@ -77,19 +87,16 @@
    align-items: center;
    margin-bottom: 3rem;
 
-   &>a {
-      color: $link-hover;
-
-      &:first-of-type {
-         margin-right: 3rem;
-      }
-   }
-
    ul {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 3rem;
+
+      .active {
+         a {
+            color: lighten($main-text, 50%);
+         }
+      }
 
       li {
          margin-right: 1.5rem;
@@ -110,6 +117,21 @@
             }
          }
 
+         &:first-of-type {
+            a {
+               margin-right: 2rem;
+               color: $link-hover;
+               
+            }
+         }
+
+         &:last-of-type {
+            a {
+               margin-left: 2rem;
+               color: $link-hover;
+            }
+         }
+
       }
    }
 }
@@ -123,8 +145,12 @@
          .home-article {
             .article-content {
                .article-content-text {
-                  max-height: calc(3rem + (5 * 1.6rem));
+                  margin-left: 2rem;
                }
+
+               // .article-content-text {
+               //    max-height: calc(3rem + (5 * 1.6rem));
+               // }
 
                .article-title {
                   // @include text-format(1.4rem, 1.6rem);
@@ -143,13 +169,13 @@
       .home-main-articles-section {
          .home-article {
             .article-content {
-               .article-content-text {
-                  max-height: calc(3rem + (5 * 2.4rem));
-               }
 
                .article-title {
                   @include text-format(1.8rem, 2.4rem);
                   font-family: 'FreightDispProBold-Regular';
+                  a {
+                     max-height: calc(4 * 2.4rem);
+                  }
                }
             }
          }
@@ -166,13 +192,14 @@
       .home-main-articles-section {
          .home-article {
             .article-content {
-               .article-content-text {
-                  max-height: calc(3rem + (5 * 3rem));
-               }
 
                .article-title {
                   @include text-format(2.4rem, 3rem);
                   font-family: 'FreightDispProBold-Regular';
+
+                  a {
+                     max-height: calc(5 * 3rem);
+                  }
                }
             }
          }
